@@ -1,75 +1,46 @@
 # Author: Xiaoyong Guo
 # Date: 2018-03-01
 
-import datetime
+import sys
 import json
-import os
 
-import requests
-import youtube_dl
-
-from icalendar import Calendar
-
-
-def load_events():
-  try:
-    events = json.load(open('history.json'))
-    return events
-  except:
-    return []
+from .util import (
+  BaiduCloudStorage,
+  set_timezone_to_shanghai,
+  ScopedTempDir,
+  retrieve_managebac_calendar,
+  calendar_to_list_of_dicts,
+)
 
 
-def store_events(events):
-  with open('history.json', 'w') as ofile:
-    ofile.write(json.dumps(events, indent=2))
+def update_assignment(baidu_storage, date_str, events):
+    filepath = os.path.join('kangaroo', date_str)
+    baidu_storage.makedir(filepath)
+    homework_json = json.dumps(event, indent=2)
+    with ScopedTempDir(suffix='kangaroo_') as temp_dir:
+        json_local = os.path.join(temp_dir, 'homework.json')
+        json_remote = os.path.join(filepath, 'homework.json')
+        with open(json_local, 'wt') as wfile:
+            wfile.write(homework_json)
 
+        video_list_local = os.path.join(temp_dir, 'video_list.json')
+        video_list_remote = os.path.join(filepath, 'video_list.json')
+        with open(video_list, 'wt') as wfile:
+            wfile.write(json_local)
 
-def retrieve_calendar():
-  jimcal = 'webcal://fudan.managebac.com/parent/events/child/11748276/token/4fbc3f50-5564-0134-a2c7-0cc47aa8e996.ics'
-  url = jimcal.replace('webcal', 'http')
-  cal_text = requests.get(url).text
-  cal = Calendar.from_ical(cal_text)
-  return cal
+    baidu_storage.upload(json_local, json_remote)
+    baidu_storage.upload(video_list_local, video_list_remote)
 
-
-def get_latest_events(cal):
-  today = datetime.datetime.today().date()
-  new_events = []
-  for component in cal.walk():
-    if component.name == 'VEVENT':
-      dt = component.get('dtstart').dt
-      if dt.date() >= today:
-        new_events.append({
-            'summary': component.get('summary'),
-            'description': component.get('description'),
-            'datetime': str(dt)})
-  return new_events
-
-
-def extract_youtube(events):
-  url_list = []
-  for event in events:
-    if not event['description']:
-      continue
-    for line in event['description'].split('\n'):
-      if 'youtube' in line and 'http' in line:
-        url_list.append(line.strip())
-  return url_list
-
-def download_video(url):
-  with youtube_dl.YoutubeDL() as ydl:
-    ydl.download(url)
 
 def main():
-  os.environ['TZ'] = 'Asia/Shanghai'
-  cal = retrieve_calendar()
-  events = get_latest_events(cal)
-  url_list = extract_youtube(events)
-  for url in url_list:
-    print(url)
-    #print('download ' + url)
-    #download_video([url])
+    set_timezone_to_shanghai()
+    cal = retrieve_managebac_calendar()
+    event_dict = calendar_to_list_of_dicts(cal)
+    baidu_storage = BaiduCloudStorage()
+    for date_str, events in event_dict:
+        update_assignment(baidu_storage, date_str, events)
+    return 0
 
 
 if __name__ == '__main__':
-  main()
+    sys.exit(main())
