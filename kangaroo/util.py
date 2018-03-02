@@ -18,6 +18,8 @@ MANAGEBAC_ICAL_URL = \
 
 GET_ICAL_URL = MANAGEBAC_ICAL_URL.replace("webcal", "http")
 
+HOMEWORK_ROOT = 'fdis/homework/kangaroo'
+
 
 def to_timestamp(datetime_obj: datetime.datetime):
     # Well, not really Unix epoch.
@@ -30,9 +32,20 @@ def to_human_readable_time(datetime_obj: datetime.datetime):
     return datetime_obj.isoformat()
 
 
-def retrieve_managebac_calendar():
-    cal_text = requests.get(GET_ICAL_URL).text
+def retrieve_managebac_calendar(timeout=20):
+    cal_text = requests.get(GET_ICAL_URL, timeout=timeout).text
     cal = icalendar.Calendar.from_ical(cal_text)
+    return cal
+
+
+def retrieve_baidu_copy_of_calendar():
+    cal_file = os.path.join(HOMEWORK_ROOT, 'calendar.ics')
+    baidu_storage = BaiduCloudStorage()
+    cal_text = baidu_storage.download_as_bytes(cal_file)
+    if cal_text:
+        cal = icalendar.Calendar.from_ical(cal_text)
+    else:
+        cal = icalendar.Calendar()
     return cal
 
 
@@ -47,9 +60,22 @@ def calendar_to_list_of_dicts(cal):
         date_str = event_time.date().strftime('%Y%m%d')
         timestamp = to_timestamp(event_time)
         human_readable_time = to_human_readable_time(event_time)
+
+        summary = component.get('summary')
+        if summary is None:
+            summary = ""
+        else:
+            summary = summary.encode().decode()
+
+        description = component.get('description')
+        if description is None:
+            description = ""
+        else:
+            description = description.encode().decode()
+
         event = {
-            'summary': component.get('summary'),
-            'description': component.get('description'),
+            'summary': summary,
+            'description': description,
             'timestamp': timestamp,
             'human_readable_time': human_readable_time,
         }
@@ -77,14 +103,36 @@ class BaiduCloudStorage(object):
     def __init__(self):
         self._bypy = bypy.ByPy()
 
-    def upload(self, filename: str):
+    def upload(self, filename: str, remotepath: str = ''):
         if os.path.isfile(filename):
-            self._bypy.upload(filename)
+            self._bypy.upload(filename, remotepath)
         else:
             raise FileNotFoundError(filename)
 
+    def upload_bytes(self, contents, remotepath: str):
+        if isinstance(contents, str):
+            contents = contents.encode()
+
+        with ScopedTempDir() as temp_dir:
+            local_file = os.path.join(temp_dir, 'tempfile')
+            with open(local_file, 'wb') as wfile:
+                wfile.write(contents)
+            assert os.path.isfile(local_file), '%s not found!' % local_file
+            self._bypy.upload(local_file, remotepath)
+
     def download(self, filepath: str, localpath: str = ''):
         self._bypy.download(filepath, localpath)
+
+    def download_as_bytes(self, filepath: str):
+        if not self.file_exists(filepath):
+            return b''
+
+        with ScopedTempDir() as temp_dir:
+            local_file = os.path.join(temp_dir, 'tempfile')
+            self._bypy.download(filepath, local_file)
+            with open(local_file, 'rb') as rfile:
+                contents = rfile.read()
+        return contents
 
     def file_exists(self, filepath):
         return self._bypy.meta(filepath) == 0
@@ -128,4 +176,3 @@ class ScopedTempDir(object):
             raise Exception('Wrong usage!')
         self._entered = False
         self.__exit__(None, None, None)
-
