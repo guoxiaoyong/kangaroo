@@ -4,19 +4,27 @@
 import json
 import os
 import sys
+import datetime
 
-from util import (
-  BaiduCloudStorage,
-  set_timezone_to_shanghai,
-  retrieve_managebac_calendar,
-  retrieve_baidu_copy_of_calendar,
-  calendar_to_list_of_dicts,
-  HOMEWORK_ROOT,
+import absl.flags as flags
+
+import util
+
+flags.DEFINE_boolean(
+    "show",
+    True,
+    "Show latest homework or events."
+)
+
+flags.DEFINE_boolean(
+    "update_baidu",
+    False,
+    "Update homework in Baidu cloud storage."
 )
 
 
 def update_assignment(baidu_storage, date_str, events):
-    date_dir = os.path.join(HOMEWORK_ROOT, date_str)
+    date_dir = os.path.join(util.HOMEWORK_ROOT, date_str)
     remote_json_file = os.path.join(date_dir, 'homework.json')
     baidu_storage.makedir(date_dir)  # Will create dir if not exist.
     remote_json = baidu_storage.download_as_bytes(remote_json_file)
@@ -31,23 +39,53 @@ def update_assignment(baidu_storage, date_str, events):
         print('remote json file uploaded: %s' % remote_json_file)
 
 
-def main():
-    set_timezone_to_shanghai()
-    cal = retrieve_managebac_calendar()
-    baidu_cal = retrieve_baidu_copy_of_calendar()
+def update_baidu_homework():
+    util.set_timezone_to_shanghai()
+    cal = util.retrieve_managebac_calendar()
+    baidu_cal = util.retrieve_baidu_copy_of_calendar()
     if cal == baidu_cal:
-        #return
-        pass
+        return
 
-    baidu_storage = BaiduCloudStorage()
-    calendar_path = os.path.join(HOMEWORK_ROOT, 'calendar.ics')
+    baidu_storage = util.BaiduCloudStorage()
+    calendar_path = os.path.join(util.HOMEWORK_ROOT, 'calendar.ics')
     baidu_storage.upload_bytes(cal.to_ical(), calendar_path)
 
-    event_dict = calendar_to_list_of_dicts(cal)
+    event_dict = util.calendar_to_list_of_dicts(cal)
     for date_str, events in event_dict.items():
         update_assignment(baidu_storage, date_str, events)
     return 0
 
 
+def one_day_events_to_text(events):
+    text = ''
+    for event in events:
+        text += 'Date time: %s\n' % event['human_readable_time']
+        text += 'Summary: %s\n' % event['summary']
+        text += 'Description:\n%s\n' % event['description']
+    return text
+
+
+def show_latest_homework():
+    cal = util.retrieve_managebac_calendar()
+    event_dict = util.calendar_to_list_of_dicts(cal)
+    today = datetime.datetime.today().date()
+    for date_str, events in event_dict.items():
+        event_date = datetime.datetime.strptime(date_str, '%Y%m%d').date()
+        if event_date >= today:
+            text = one_day_events_to_text(events)
+            print('='*16)
+            print(text)
+
+
+def main(argv):
+    flags.FLAGS(argv)
+
+    if flags.FLAGS.show:
+        show_latest_homework()
+
+    if flags.FLAGS.update_baidu:
+        update_baidu_homework()
+
+
 if __name__ == '__main__':
-    sys.exit(main())
+    sys.exit(main(sys.argv))
