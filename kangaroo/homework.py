@@ -46,6 +46,12 @@ flags.DEFINE_boolean(
     "Do not download videos from youtube."
 )
 
+flags.DEFINE_boolean(
+    "ignore_baidu",
+    True,
+    "Do not check data in Baidu storage."
+)
+
 
 def update_baidu_homework():
     cal = util.retrieve_managebac_calendar()
@@ -89,7 +95,10 @@ def show_latest_homework():
 
 
 def download_and_upload_youtube_video(ignore_downloaded_list, fake_download, fake_upload):
-    cal = util.retrieve_baidu_copy_of_calendar()
+    if ignore_downloaded_list:
+        cal = util.retrieve_managebac_calendar()
+    else:
+        cal = util.retrieve_baidu_copy_of_calendar()
     event_dict = util.calendar_to_list_of_dicts(cal)
     today = datetime.datetime.today().date()
     shell_script = '!/usr/bin/bash\n\n'  # if fake_upload is False, not used.
@@ -124,6 +133,30 @@ def download_and_upload_youtube_video(ignore_downloaded_list, fake_download, fak
             wfile.write(shell_script)
 
 
+def download_youtube_video(fake_download):
+    cal = util.retrieve_managebac_calendar()
+    event_dict = util.calendar_to_list_of_dicts(cal)
+    today = datetime.datetime.today().date()
+    shell_script = '!/usr/bin/bash\n\n'  # if fake_upload is False, not used.
+
+    for date_str, events in event_dict.items():
+        event_date = datetime.datetime.strptime(date_str, '%Y%m%d').date()
+        if event_date >= today:
+            to_be_downloaded = util.retrieve_homework_youtube_video_list_by_date(date_str, 'managebac')
+            for url in to_be_downloaded:
+                video_info = util.download_and_upload_youtube_video(
+                    date_str, url,
+                    fake_download=fake_download,
+                    fake_upload=True)
+
+                filename = video_info['filename']
+                remote_filename = os.path.join(util.HOMEWORK_ROOT, date_str, filename)
+                shell_script += 'bypy upload "%s" "%s"\n' % (filename, remote_filename)
+
+    with open('baidu_upload.sh', 'wt') as wfile:
+        wfile.write(shell_script)
+
+
 def main(argv):
     flags.FLAGS(argv)
     util.set_timezone_to_shanghai()
@@ -135,10 +168,7 @@ def main(argv):
         update_baidu_homework()
 
     if flags.FLAGS.get_video:
-        download_and_upload_youtube_video(
-            flags.FLAGS.ignore_downloaded_list,
-            flags.FLAGS.fake_download_video,
-            flags.FLAGS.fake_upload_video)
+        download_youtube_video(flags.FLAGS.fake_download_video)
 
 
 if __name__ == '__main__':

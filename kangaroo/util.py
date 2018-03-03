@@ -2,6 +2,7 @@
 
 import atexit
 import datetime
+import errno
 import json
 import os
 import shutil
@@ -13,6 +14,7 @@ import icalendar
 import requests
 import pytz
 import youtube_dl
+import cachetools.func
 
 
 # Constants
@@ -37,6 +39,7 @@ def to_human_readable_time(datetime_obj: datetime.datetime):
     return datetime_obj.isoformat()
 
 
+@cachetools.func.ttl_cache(maxsize=1, ttl=60)
 def retrieve_managebac_calendar(timeout=20):
     cal_text = requests.get(GET_ICAL_URL, timeout=timeout).text
     cal = icalendar.Calendar.from_ical(cal_text)
@@ -114,10 +117,20 @@ def extract_youtube_video_list_from_description(description: typing.Text):
     return url_list
 
 
-def retrieve_homework_youtube_video_list_by_date(date_str: str):
-    homework_dict = retrieve_baidu_homework(date_str)
-    description = homework_dict.get('description', '')
-    video_list = extract_youtube_video_list_from_description(description)
+def retrieve_homework_youtube_video_list_by_date(date_str: str, where: str):
+    assert where in ['baidu', 'managebac']
+    if where == 'baidu':
+        homework_dict = retrieve_baidu_homework(date_str)
+    elif where == 'managebac':
+        cal = retrieve_managebac_calendar()
+        event_dict = calendar_to_list_of_dicts(cal)
+        homework_dict = event_dict.get(date_str, {})
+    else:
+        raise ValueError('Invalid where parameter. %s' % where)
+    video_list = []
+    for video_info in homework_dict:
+        description = video_info.get('description', '')
+        video_list += extract_youtube_video_list_from_description(description)
     return video_list
 
 
@@ -145,7 +158,7 @@ def retrieve_downloaded_youtube_video_list_by_date(date_str: str):
 def get_videos_to_be_downloaded(date_str: str):
     downloaded_video_list = retrieve_downloaded_youtube_video_list_by_date(date_str)
     downloaded_video_set = {video['url'] for video in downloaded_video_list}
-    homework_video_set = set(retrieve_homework_youtube_video_list_by_date(date_str))
+    homework_video_set = set(retrieve_homework_youtube_video_list_by_date(date_str, where="baidu"))
     return (homework_video_set - downloaded_video_set,
             downloaded_video_list)
 
@@ -255,6 +268,63 @@ class BaiduCloudStorage(object):
             res = self._bypy.mkdir(dir_name)
             assert res == 0
 
+
+class LocalStorage(object):
+    def __init__(self, rootdir='.'):
+        self._rootdir = rootdir
+
+    def _fullpath(self, path):
+        return os.path.join(self._rootdir, path)
+
+    def upload(self, filename: str, remotepath: str = ''):
+        if remotepath.endswith('/') or remotepath == '':
+            remotepath += os.path.basename(filename)
+
+        if os.path.isfile(filename):
+            shutil.copyfile(filename, self._fullpath(remotepath))
+        else:
+            raise FileNotFoundError(filename)
+
+    def upload_bytes(self, contents, remotepath: str):
+        if isinstance(contents, str):
+            contents = contents.encode()
+
+        with ScopedTempDir() as temp_dir:
+            local_file = os.path.join(temp_dir, 'tempfile')
+            with open(local_file, 'wb') as wfile:
+                wfile.write(contents)
+            assert os.path.isfile(local_file), '%s not found!' % local_file
+            self.upload(local_file, remotepath)
+
+    def download(self, filepath: str, localpath: str = ''):
+        if localpath.endswith('/') or localpath == '':
+            localpath += os.path.basename(filepath)
+        shutil.copyfile(self._fullpath(filepath), localpath)
+
+    def download_as_bytes(self, filepath: str):
+        if not self.file_exists(filepath):
+            return b''
+
+        with ScopedTempDir() as temp_dir:
+            local_file = os.path.join(temp_dir, 'tempfile')
+            self.download(filepath, local_file)
+            with open(local_file, 'rb') as rfile:
+                contents = rfile.read()
+        return contents
+
+    def file_exists(self, filepath):
+        return os.path.exists(filepath)
+
+    def makedir(self, dir_name: str) -> None:
+        try:
+            os.makedirs(self._fullpath(dir_name))
+        except OSError as exc:
+            if exc.errno == errno.EEXIST and os.path.isdir(self._fullpath(dir_name)):
+                pass
+            else:
+                raise
+
+BaiduCloudStorage = LocalStorage
 
 class ScopedTempDir(object):
     def __init__(self, suffix='', parent_dir=None):
