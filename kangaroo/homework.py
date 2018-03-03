@@ -22,21 +22,29 @@ flags.DEFINE_boolean(
     "Update homework in Baidu cloud storage."
 )
 
+flags.DEFINE_boolean(
+    "get_video",
+    True,
+    "Download videos"
+)
 
-def update_assignment(baidu_storage, date_str, events):
-    date_dir = os.path.join(util.HOMEWORK_ROOT, date_str)
-    remote_json_file = os.path.join(date_dir, 'homework.json')
-    baidu_storage.makedir(date_dir)  # Will create dir if not exist.
-    remote_json = baidu_storage.download_as_bytes(remote_json_file)
-    try:
-        remote_events = json.loads(remote_json)
-    except json.decoder.JSONDecodeError:
-        remote_events = dict()
+flags.DEFINE_boolean(
+    "fake_upload_video",
+    True,
+    "Do not upload videos to Baidu, but generate a shell script to to so."
+)
 
-    if events != remote_events:
-        homework_json = json.dumps(events, indent=2)
-        baidu_storage.upload_bytes(homework_json, remote_json_file)
-        print('remote json file uploaded: %s' % remote_json_file)
+flags.DEFINE_boolean(
+    "ignore_downloaded_list",
+    True,
+    "Do not check downloaded video list."
+)
+
+flags.DEFINE_boolean(
+    "fake_download_video",
+    True,
+    "Do not download videos from youtube."
+)
 
 
 def update_baidu_homework():
@@ -50,7 +58,13 @@ def update_baidu_homework():
 
     event_dict = util.calendar_to_list_of_dicts(cal)
     for date_str, events in event_dict.items():
-        update_assignment(baidu_storage, date_str, events)
+        remote_events = util.retrieve_baidu_homework(date_str)
+        if events != remote_events:
+            homework_json = json.dumps(events, indent=2)
+            baidu_homework_json_file = os.path.join(
+                util.HOMEWORK_ROOT, date_str, 'homework.json')
+            baidu_storage.upload_bytes(homework_json, baidu_homework_json_file)
+            print('remote json file uploaded: %s' % baidu_homework_json_file)
 
 
 def one_day_events_to_text(events):
@@ -74,6 +88,42 @@ def show_latest_homework():
             print(text)
 
 
+def download_and_upload_youtube_video(ignore_downloaded_list, fake_download, fake_upload):
+    cal = util.retrieve_baidu_copy_of_calendar()
+    event_dict = util.calendar_to_list_of_dicts(cal)
+    today = datetime.datetime.today().date()
+    shell_script = '!/usr/bin/bash\n\n'  # if fake_upload is False, not used.
+
+    for date_str, events in event_dict.items():
+        event_date = datetime.datetime.strptime(date_str, '%Y%m%d').date()
+        if event_date >= today:
+            if ignore_downloaded_list:
+                to_be_downloaded = util.retrieve_homework_youtube_video_list_by_date(date_str)
+                downloaded_video_list = []
+            else:
+                to_be_downloaded, downloaded_video_list = util.get_videos_to_be_downloaded(date_str)
+            # Download videos, upload maybe fake
+            for url in to_be_downloaded:
+                new_info = util.download_and_upload_youtube_video(
+                    date_str, url,
+                    fake_download=fake_download,
+                    fake_upload=fake_upload)
+                downloaded_video_list.append(new_info)
+            util.update_downloaded_video_list(downloaded_video_list, date_str)
+
+            # Generate upload command, useless if fake_upload is false.
+            for video_info in downloaded_video_list:
+                if video_info['url'] in to_be_downloaded:
+                    filename = video_info['filename']
+                    remote_filename = os.path.join(util.HOMEWORK_ROOT, date_str, filename)
+                    shell_script += 'bypy upload "%s" "%s"\n' % (filename, remote_filename)
+
+    # Write to shell script file.
+    if fake_upload:
+        with open('baidu_upload.sh', 'wt') as wfile:
+            wfile.write(shell_script)
+
+
 def main(argv):
     flags.FLAGS(argv)
     util.set_timezone_to_shanghai()
@@ -83,6 +133,12 @@ def main(argv):
 
     if flags.FLAGS.update_baidu:
         update_baidu_homework()
+
+    if flags.FLAGS.get_video:
+        download_and_upload_youtube_video(
+            flags.FLAGS.ignore_downloaded_list,
+            flags.FLAGS.fake_download_video,
+            flags.FLAGS.fake_upload_video)
 
 
 if __name__ == '__main__':

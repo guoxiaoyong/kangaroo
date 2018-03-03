@@ -98,7 +98,11 @@ def retrieve_baidu_homework(date_str):
         return dict()
 
     homework_json = baidu_storage.download_as_bytes(homework_json_file)
-    homework_dict = json.loads(homework_json)
+    try:
+        homework_dict = json.loads(homework_json)
+    except json.decoder.JSONDecodeError:
+        homework_dict = dict()
+
     return homework_dict
 
 
@@ -142,25 +146,64 @@ def get_videos_to_be_downloaded(date_str: str):
     downloaded_video_list = retrieve_downloaded_youtube_video_list_by_date(date_str)
     downloaded_video_set = {video['url'] for video in downloaded_video_list}
     homework_video_set = set(retrieve_homework_youtube_video_list_by_date(date_str))
-    return homework_video_set - downloaded_video_set
+    return (homework_video_set - downloaded_video_set,
+            downloaded_video_list)
 
 
-def download_youtube_video(url):
-    with youtube_dl.YoutubeDL() as ydl:
+def update_downloaded_video_list(video_list: list, date_str: str):
+    video_list_json = json.dumps(video_list)
+    baidu_storage = BaiduCloudStorage()
+    remote_video_json_file = os.path.join(HOMEWORK_ROOT, date_str, 'video.json')
+    baidu_storage.upload_bytes(video_list_json, remote_video_json_file)
+
+
+def download_youtube_video(url: str, ydl_opts: dict = None) -> str:
+    if ydl_opts:
+        ydl_opts = ydl_opts.copy()
+    else:
+        ydl_opts = dict()
+
+    postprocessors = [{
+        'key': 'FFmpegVideoConvertor',
+        'preferedformat': 'mp4',
+    }]
+    ydl_opts.update({
+        'writeinfojson': True,
+        'prefer_ffmpeg': True,
+        'postprocessors': postprocessors,
+    })
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download(url)
-    filename = "hello"
+    with open('info.json') as rfile:
+        info_dict = json.load(rfile)
+        filename = info_dict['_filename']
+    assert os.path.isfile(filename), 'Download failed!'
     return filename
 
 
-def download_and_upload_youtube_video(date_str, url):
-    filename = download_youtube_video(url)
+def download_and_upload_youtube_video(
+        date_str: str,
+        url: str,
+        fake_download=False,
+        fake_upload=False) -> dict:
+
+    ydl_opts = {'simulate': True} if fake_download else None
+    filename = download_youtube_video(url, ydl_opts)
+
     if not os.path.isfile(filename):
         raise FileNotFoundError(filename)
-    remote_filename = os.path.join(HOMEWORK_ROOT, date_str, os.path.basename(filename))
-    baidu_storage = BaiduCloudStorage()
-    baidu_storage.upload(filename, remote_filename)
-    if not baidu_storage.file_exists(remote_filename):
-        raise RuntimeError('upload %s failed!' % remote_filename)
+
+    if fake_upload:
+        remote_filename = os.path.join(HOMEWORK_ROOT, date_str, os.path.basename(filename))
+        baidu_storage = BaiduCloudStorage()
+        baidu_storage.upload(filename, remote_filename)
+        if not baidu_storage.file_exists(remote_filename):
+            raise RuntimeError('upload %s failed!' % remote_filename)
+
+    return {
+        'url': url,
+        'filename': filename,
+    }
 
 
 def set_timezone_to_shanghai():
