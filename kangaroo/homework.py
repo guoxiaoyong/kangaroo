@@ -40,20 +40,17 @@ def update_assignment(baidu_storage, date_str, events):
 
 
 def update_baidu_homework():
-    util.set_timezone_to_shanghai()
     cal = util.retrieve_managebac_calendar()
     baidu_cal = util.retrieve_baidu_copy_of_calendar()
     if cal == baidu_cal:
         return
 
     baidu_storage = util.BaiduCloudStorage()
-    calendar_path = os.path.join(util.HOMEWORK_ROOT, 'calendar.ics')
-    baidu_storage.upload_bytes(cal.to_ical(), calendar_path)
+    baidu_storage.upload_bytes(cal.to_ical(), util.BAIDU_CALENDAR_FILE)
 
     event_dict = util.calendar_to_list_of_dicts(cal)
     for date_str, events in event_dict.items():
         update_assignment(baidu_storage, date_str, events)
-    return 0
 
 
 def one_day_events_to_text(events):
@@ -79,6 +76,7 @@ def show_latest_homework():
 
 def main(argv):
     flags.FLAGS(argv)
+    util.set_timezone_to_shanghai()
 
     if flags.FLAGS.show:
         show_latest_homework()

@@ -2,6 +2,7 @@
 
 import atexit
 import datetime
+import json
 import os
 import shutil
 import tempfile
@@ -11,14 +12,18 @@ import bypy
 import icalendar
 import requests
 import pytz
+import youtube_dl
 
 
+# Constants
 MANAGEBAC_ICAL_URL = \
     "webcal://fudan.managebac.com/parent/events/child/11748276/token/4fbc3f50-5564-0134-a2c7-0cc47aa8e996.ics"
 
 GET_ICAL_URL = MANAGEBAC_ICAL_URL.replace("webcal", "http")
 
 HOMEWORK_ROOT = 'fdis/homework/kangaroo'
+
+BAIDU_CALENDAR_FILE = os.path.join(HOMEWORK_ROOT, 'calendar.ics')
 
 
 def to_timestamp(datetime_obj: datetime.datetime):
@@ -39,9 +44,8 @@ def retrieve_managebac_calendar(timeout=20):
 
 
 def retrieve_baidu_copy_of_calendar():
-    cal_file = os.path.join(HOMEWORK_ROOT, 'calendar.ics')
     baidu_storage = BaiduCloudStorage()
-    cal_text = baidu_storage.download_as_bytes(cal_file)
+    cal_text = baidu_storage.download_as_bytes(BAIDU_CALENDAR_FILE)
     if cal_text:
         cal = icalendar.Calendar.from_ical(cal_text)
     else:
@@ -87,12 +91,76 @@ def calendar_to_list_of_dicts(cal):
     return event_dict
 
 
-def extract_youtube_from_description(description: typing.Text):
+def retrieve_baidu_homework(date_str):
+    baidu_storage = BaiduCloudStorage()
+    homework_json_file = os.path.join(HOMEWORK_ROOT, date_str, 'homework.json')
+    if not baidu_storage.file_exists(homework_json_file):
+        return dict()
+
+    homework_json = baidu_storage.download_as_bytes(homework_json_file)
+    homework_dict = json.loads(homework_json)
+    return homework_dict
+
+
+def extract_youtube_video_list_from_description(description: typing.Text):
     url_list = []
     for line in description.split('\n'):
         if 'youtube' in line and 'http' in line:
             url_list.append(line.strip())
     return url_list
+
+
+def retrieve_homework_youtube_video_list_by_date(date_str: str):
+    homework_dict = retrieve_baidu_homework(date_str)
+    description = homework_dict.get('description', '')
+    video_list = extract_youtube_video_list_from_description(description)
+    return video_list
+
+
+def retrieve_downloaded_youtube_video_list_by_date(date_str: str):
+    baidu_storage = BaiduCloudStorage()
+    video_json_file = os.path.join(HOMEWORK_ROOT, date_str, 'video.json')
+    if not baidu_storage.file_exists(video_json_file):
+        return dict()
+
+    video_json = baidu_storage.download_as_bytes(video_json_file)
+    video_dict = json.loads(video_json)
+    #
+    # video_dict structure:
+    # [
+    #   {
+    #     'url': 'https://www.yutube.com/ABCDEFD'
+    #     'filename': 'Video File Name.ABCDEF.mp4'
+    #   },
+    #   ....
+    # ]
+    #
+    return video_dict
+
+
+def get_videos_to_be_downloaded(date_str: str):
+    downloaded_video_list = retrieve_downloaded_youtube_video_list_by_date(date_str)
+    downloaded_video_set = {video['url'] for video in downloaded_video_list}
+    homework_video_set = set(retrieve_homework_youtube_video_list_by_date(date_str))
+    return homework_video_set - downloaded_video_set
+
+
+def download_youtube_video(url):
+    with youtube_dl.YoutubeDL() as ydl:
+        ydl.download(url)
+    filename = "hello"
+    return filename
+
+
+def download_and_upload_youtube_video(date_str, url):
+    filename = download_youtube_video(url)
+    if not os.path.isfile(filename):
+        raise FileNotFoundError(filename)
+    remote_filename = os.path.join(HOMEWORK_ROOT, date_str, os.path.basename(filename))
+    baidu_storage = BaiduCloudStorage()
+    baidu_storage.upload(filename, remote_filename)
+    if not baidu_storage.file_exists(remote_filename):
+        raise RuntimeError('upload %s failed!' % remote_filename)
 
 
 def set_timezone_to_shanghai():
