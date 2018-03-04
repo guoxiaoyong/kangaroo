@@ -46,14 +46,32 @@ def retrieve_managebac_calendar(timeout=20):
     return cal
 
 
-def retrieve_baidu_copy_of_calendar():
-    baidu_storage = BaiduCloudStorage()
-    cal_text = baidu_storage.download_as_bytes(BAIDU_CALENDAR_FILE)
+# Return storage.
+@cachetools.func.lru_cache(maxsize=64)
+def get_storage(name):
+    storage = {
+        'baidu': BaiduCloudStorage(),
+        'local': LocalStorage(),
+    }
+    return storage[name]
+
+
+def retrieve_storage_copy_of_calendar(storage_name):
+    storage = get_storage(storage_name)
+    cal_text = storage.load(STORAGE_CALENDAR_FILE)
     if cal_text:
         cal = icalendar.Calendar.from_ical(cal_text)
     else:
         cal = icalendar.Calendar()
     return cal
+
+
+def retrieve_calendar(name):
+    if name == 'managebac':
+        cal = retrieve_manageback_calender()
+    else:
+        cal = retrieve_storage_copy_of_calender(name)
+    return calendar_to_list_of_dicts(cal)
 
 
 def calendar_to_list_of_dicts(cal):
@@ -149,13 +167,7 @@ def retrieve_downloaded_youtube_video_list_by_date(date_str: str):
     #     'url': 'https://www.yutube.com/ABCDEFD'
     #     'filename': 'Video File Name.ABCDEF.mp4'
     #   },
-    #   ....
-    # ]
-    #
-    return video_dict
-
-
-def get_videos_to_be_downloaded(date_str: str):
+    #   .                                           def get_videos_to_be_downloaded(date_str: str):
     downloaded_video_list = retrieve_downloaded_youtube_video_list_by_date(date_str)
     downloaded_video_set = {video['url'] for video in downloaded_video_list}
     homework_video_set = set(retrieve_homework_youtube_video_list_by_date(date_str, where="baidu"))
@@ -324,7 +336,7 @@ class LocalStorage(object):
             else:
                 raise
 
-BaiduCloudStorage = LocalStorage
+
 
 class ScopedTempDir(object):
     def __init__(self, suffix='', parent_dir=None):
