@@ -25,7 +25,7 @@ GET_ICAL_URL = MANAGEBAC_ICAL_URL.replace("webcal", "http")
 
 HOMEWORK_ROOT = 'fdis/homework/kangaroo'
 
-BAIDU_CALENDAR_FILE = os.path.join(HOMEWORK_ROOT, 'calendar.ics')
+STORAGE_CALENDAR_FILE = os.path.join(HOMEWORK_ROOT, 'calendar.ics')
 
 
 def to_timestamp(datetime_obj: datetime.datetime):
@@ -40,7 +40,7 @@ def to_human_readable_time(datetime_obj: datetime.datetime):
 
 
 @cachetools.func.ttl_cache(maxsize=1, ttl=60)
-def retrieve_managebac_calendar(timeout=20):
+def retrieve_managebac_calendar(timeout=20) -> icalendar.Calendar:
     cal_text = requests.get(GET_ICAL_URL, timeout=timeout).text
     cal = icalendar.Calendar.from_ical(cal_text)
     return cal
@@ -56,7 +56,7 @@ def get_storage(name):
     return storage[name]
 
 
-def retrieve_storage_copy_of_calendar(storage_name):
+def retrieve_storage_calendar(storage_name: str) -> icalendar.Calendar:
     storage = get_storage(storage_name)
     cal_text = storage.load(STORAGE_CALENDAR_FILE)
     if cal_text:
@@ -66,11 +66,11 @@ def retrieve_storage_copy_of_calendar(storage_name):
     return cal
 
 
-def retrieve_calendar(name):
+def retrieve_calendar(name: str):
     if name == 'managebac':
-        cal = retrieve_manageback_calender()
+        cal = retrieve_managebac_calendar()
     else:
-        cal = retrieve_storage_copy_of_calender(name)
+        cal = retrieve_storage_calendar(name)
     return calendar_to_list_of_dicts(cal)
 
 
@@ -112,21 +112,6 @@ def calendar_to_list_of_dicts(cal):
     return event_dict
 
 
-def retrieve_baidu_homework(date_str):
-    baidu_storage = BaiduCloudStorage()
-    homework_json_file = os.path.join(HOMEWORK_ROOT, date_str, 'homework.json')
-    if not baidu_storage.file_exists(homework_json_file):
-        return dict()
-
-    homework_json = baidu_storage.download_as_bytes(homework_json_file)
-    try:
-        homework_dict = json.loads(homework_json)
-    except json.decoder.JSONDecodeError:
-        homework_dict = dict()
-
-    return homework_dict
-
-
 def extract_youtube_video_list_from_description(description: typing.Text):
     url_list = []
     for line in description.split('\n'):
@@ -135,51 +120,93 @@ def extract_youtube_video_list_from_description(description: typing.Text):
     return url_list
 
 
-def retrieve_homework_youtube_video_list_by_date(date_str: str, where: str):
-    assert where in ['baidu', 'managebac']
-    if where == 'baidu':
-        homework_dict = retrieve_baidu_homework(date_str)
-    elif where == 'managebac':
-        cal = retrieve_managebac_calendar()
-        event_dict = calendar_to_list_of_dicts(cal)
-        homework_dict = event_dict.get(date_str, {})
-    else:
-        raise ValueError('Invalid where parameter. %s' % where)
-    video_list = []
-    for video_info in homework_dict:
-        description = video_info.get('description', '')
-        video_list += extract_youtube_video_list_from_description(description)
-    return video_list
+class StorageOps(object):
+    def __init__(self, storage_name):
+        self._storage = get_storage(storage_name)
+
+    @property
+    def storage_name(self):
+        return self._storage.name
+
+    @staticmethod
+    def get_homework_json_filepath(date_str: str):
+        return os.path.join(HOMEWORK_ROOT, date_str, 'homework.json')
+
+    @staticmethod
+    def get_downloaded_video_list_filepath(date_str: str):
+        return os.path.join(HOMEWORK_ROOT, date_str, 'downloaded_video.json')
+
+    @staticmethod
+    def get_calendar_filepath():
+        return os.path.join(HOMEWORK_ROOT, 'calendar.ics')
+
+    def retrieve_homework_dict(self, date_str):
+        homework_json_file = self.get_homework_json_filepath(date_str)
+        if not self._storage.file_exists(homework_json_file):
+            return dict()
+
+        homework_json = self._storage.load(homework_json_file)
+        try:
+            homework_dict = json.loads(homework_json)
+        except json.decoder.JSONDecodeError:
+            homework_dict = {}
+        return homework_dict
+
+    def get_homework_video_list(self, date_str: str):
+        homework_dict = self.retrieve_homework_dict(date_str)
+        video_list = []
+        for video_info in homework_dict:
+            description = video_info.get('description', '')
+            video_list += extract_youtube_video_list_from_description(description)
+        return video_list
+
+    def retrieve_downloaded_video_list(self, date_str: str):
+        video_json_file = self.get_downloaded_video_list_filepath(date_str)
+        if not self._storage.file_exists(video_json_file):
+            return dict()
+
+        video_json = self._storage.load(video_json_file)
+        video_dict = json.loads(video_json)
+        #
+        # video_dict structure:
+        # [
+        #   {
+        #     'url': 'https://www.yutube.com/ABCDEFD'
+        #     'filename': 'Video File Name.ABCDEF.mp4'
+        #   },
+        return video_dict
+
+    def get_videos_to_be_downloaded(self, date_str: str):
+        downloaded_video_list = self.retrieve_downloaded_video_list(date_str)
+        downloaded_video_set = {video['url'] for video in downloaded_video_list}
+        homework_video_set = set(self.get_homework_video_list(date_str))
+        return (homework_video_set - downloaded_video_set,
+                downloaded_video_list)
+
+    def update_downloaded_video_list(self, video_list: list, date_str: str):
+        video_json_file = self.get_downloaded_video_list_filepath(date_str)
+        video_list_json = json.dumps(video_list)
+        self._storage.upload_bytes(video_list_json, video_json_file)
+
+    def update_calendar(self, ical_text):
+        calendar_path = self.get_calendar_filepath()
+        self._storage.upload_contents(ical_text, calendar_path)
+
+    def update_homework(self, homework_dict, date_str: str):
+        homework_json_file = self.get_homework_json_filepath(date_str)
+        homework_json = json.dumps(homework_dict, indent=2)
+        print(homework_json_file)
+        print(homework_json)
+        self._storage.upload_contents(homework_json, homework_json_file)
 
 
-def retrieve_downloaded_youtube_video_list_by_date(date_str: str):
-    baidu_storage = BaiduCloudStorage()
-    video_json_file = os.path.join(HOMEWORK_ROOT, date_str, 'video.json')
-    if not baidu_storage.file_exists(video_json_file):
-        return dict()
-
-    video_json = baidu_storage.download_as_bytes(video_json_file)
-    video_dict = json.loads(video_json)
-    #
-    # video_dict structure:
-    # [
-    #   {
-    #     'url': 'https://www.yutube.com/ABCDEFD'
-    #     'filename': 'Video File Name.ABCDEF.mp4'
-    #   },
-    #   .                                           def get_videos_to_be_downloaded(date_str: str):
-    downloaded_video_list = retrieve_downloaded_youtube_video_list_by_date(date_str)
-    downloaded_video_set = {video['url'] for video in downloaded_video_list}
-    homework_video_set = set(retrieve_homework_youtube_video_list_by_date(date_str, where="baidu"))
-    return (homework_video_set - downloaded_video_set,
-            downloaded_video_list)
-
-
-def update_downloaded_video_list(video_list: list, date_str: str):
-    video_list_json = json.dumps(video_list)
-    baidu_storage = BaiduCloudStorage()
-    remote_video_json_file = os.path.join(HOMEWORK_ROOT, date_str, 'video.json')
-    baidu_storage.upload_bytes(video_list_json, remote_video_json_file)
+@cachetools.func.lru_cache(maxsize=64)
+def get_storage_ops(storage_name):
+    storage_ops = {
+        'baidu': StorageOps('baidu'),
+        'local': StorageOps('local'),
+    }
+    return storage_ops[storage_name]
 
 
 def download_youtube_video(url: str, ydl_opts: dict = None) -> str:
@@ -236,8 +263,14 @@ def set_timezone_to_shanghai():
 
 
 class BaiduCloudStorage(object):
+    _name = 'baidu'
+
     def __init__(self):
         self._bypy = bypy.ByPy()
+
+    @property
+    def name(self):
+        return type(self)._name
 
     def upload(self, filename: str, remotepath: str = ''):
         if os.path.isfile(filename):
@@ -255,6 +288,9 @@ class BaiduCloudStorage(object):
                 wfile.write(contents)
             assert os.path.isfile(local_file), '%s not found!' % local_file
             self._bypy.upload(local_file, remotepath)
+
+    def upload_contents(self, contents, remote_path: str):
+        self.upload_bytes(contents, remote_path)
 
     def download(self, filepath: str, localpath: str = ''):
         self._bypy.download(filepath, localpath)
@@ -282,18 +318,47 @@ class BaiduCloudStorage(object):
 
 
 class LocalStorage(object):
-    def __init__(self, rootdir='.'):
-        self._rootdir = rootdir
+    _name = 'local'
+
+    def __init__(self, rootdir=None):
+        if rootdir is None:
+            self._rootdir = os.path.expanduser('~/.kangaroo')
+            if os.path.isdir(self._rootdir):
+                pass
+            elif os.path.isfile(self._rootdir):
+                raise ValueError('rootdir should be a directory')
+            else:
+                os.mkdir(self._rootdir)
+        else:
+            assert os.path.exists(rootdir)
+            self._rootdir = rootdir
+
+    @property
+    def name(self):
+        return type(self)._name
 
     def _fullpath(self, path):
         return os.path.join(self._rootdir, path)
 
+    def load(self, filepath: str):
+        filepath = self._fullpath(filepath)
+        if os.path.isfile(filepath):
+            with open(filepath, 'rb') as rfile:
+                content = rfile.read()
+            return content
+        return b''
+
     def upload(self, filename: str, remotepath: str = ''):
         if remotepath.endswith('/') or remotepath == '':
             remotepath += os.path.basename(filename)
+        remotepath = self._fullpath(remotepath)
+
+        parent_dir, basename = os.path.split(remotepath)
+        if os.path.isdir(parent_dir):
+            os.makedirs(parent_dir)
 
         if os.path.isfile(filename):
-            shutil.copyfile(filename, self._fullpath(remotepath))
+            shutil.copyfile(filename, remotepath)
         else:
             raise FileNotFoundError(filename)
 
@@ -307,6 +372,9 @@ class LocalStorage(object):
                 wfile.write(contents)
             assert os.path.isfile(local_file), '%s not found!' % local_file
             self.upload(local_file, remotepath)
+
+    def upload_contents(self, contents, remote_path: str):
+        self.upload_bytes(contents, remote_path)
 
     def download(self, filepath: str, localpath: str = ''):
         if localpath.endswith('/') or localpath == '':
@@ -325,6 +393,7 @@ class LocalStorage(object):
         return contents
 
     def file_exists(self, filepath):
+        filepath = self._fullpath(filepath)
         return os.path.exists(filepath)
 
     def makedir(self, dir_name: str) -> None:
@@ -335,7 +404,6 @@ class LocalStorage(object):
                 pass
             else:
                 raise
-
 
 
 class ScopedTempDir(object):

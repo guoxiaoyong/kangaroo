@@ -16,9 +16,15 @@ flags.DEFINE_boolean(
     "Show latest homework or events."
 )
 
+flags.DEFINE_string(
+    "storage_name",
+    'local',
+    "Storage name."
+)
+
 flags.DEFINE_boolean(
-    "update_baidu",
-    False,
+    "update_storage",
+    True,
     "Update homework in Baidu cloud storage."
 )
 
@@ -53,26 +59,6 @@ flags.DEFINE_boolean(
 )
 
 
-def update_baidu_homework():
-    cal = util.retrieve_managebac_calendar()
-    baidu_cal = util.retrieve_baidu_copy_of_calendar()
-    if cal == baidu_cal:
-        return
-
-    baidu_storage = util.BaiduCloudStorage()
-    baidu_storage.upload_bytes(cal.to_ical(), util.BAIDU_CALENDAR_FILE)
-
-    event_dict = util.calendar_to_list_of_dicts(cal)
-    for date_str, events in event_dict.items():
-        remote_events = util.retrieve_baidu_homework(date_str)
-        if events != remote_events:
-            homework_json = json.dumps(events, indent=2)
-            baidu_homework_json_file = os.path.join(
-                util.HOMEWORK_ROOT, date_str, 'homework.json')
-            baidu_storage.upload_bytes(homework_json, baidu_homework_json_file)
-            print('remote json file uploaded: %s' % baidu_homework_json_file)
-
-
 def one_day_events_to_text(events):
     text = ''
     for event in events:
@@ -92,6 +78,22 @@ def show_latest_homework():
             text = one_day_events_to_text(events)
             print('='*16)
             print(text)
+
+
+def update_storage_homework(storage_name):
+    cal = util.retrieve_managebac_calendar()
+    storage_cal = util.retrieve_storage_calendar(storage_name)
+    if cal == storage_cal:
+        return
+
+    storage_ops = util.get_storage_ops(storage_name)
+    storage_ops.update_calendar(cal.to_ical())
+
+    event_dict = util.calendar_to_list_of_dicts(cal)
+    for date_str, events in event_dict.items():
+        remote_events = storage_ops.retrieve_homework_dict(date_str)
+        if events != remote_events:
+            storage_ops.update_homework(events, date_str)
 
 
 def download_and_upload_youtube_video(ignore_downloaded_list, fake_download, fake_upload):
@@ -164,11 +166,13 @@ def main(argv):
     if flags.FLAGS.show:
         show_latest_homework()
 
-    if flags.FLAGS.update_baidu:
-        update_baidu_homework()
+    if flags.FLAGS.update_storage:
+        update_storage_homework(flags.FLAGS.storage_name)
 
+    '''
     if flags.FLAGS.get_video:
         download_youtube_video(flags.FLAGS.fake_download_video)
+    '''
 
 
 if __name__ == '__main__':
