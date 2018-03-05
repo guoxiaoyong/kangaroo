@@ -8,6 +8,7 @@ import os
 import shutil
 import tempfile
 import typing
+import glob
 
 import bypy
 import icalendar
@@ -195,8 +196,6 @@ class StorageOps(object):
     def update_homework(self, homework_dict, date_str: str):
         homework_json_file = self.get_homework_json_filepath(date_str)
         homework_json = json.dumps(homework_dict, indent=2)
-        print(homework_json_file)
-        print(homework_json)
         self._storage.upload_contents(homework_json, homework_json_file)
 
 
@@ -209,7 +208,7 @@ def get_storage_ops(storage_name):
     return storage_ops[storage_name]
 
 
-def download_youtube_video(url: str, ydl_opts: dict = None) -> str:
+def download_youtube_video(url: str, ydl_opts=None) -> str:
     if ydl_opts:
         ydl_opts = ydl_opts.copy()
     else:
@@ -224,33 +223,37 @@ def download_youtube_video(url: str, ydl_opts: dict = None) -> str:
         'prefer_ffmpeg': True,
         'postprocessors': postprocessors,
     })
+
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-        ydl.download(url)
-    with open('info.json') as rfile:
+        ydl.download([url])
+
+    # Read info file.
+    info_json_files = glob.glob('*.info.json')
+    assert len(info_json_files) == 1
+    with open(info_json_files[0]) as rfile:
         info_dict = json.load(rfile)
         filename = info_dict['_filename']
+    os.remove(info_json_files[0])
     assert os.path.isfile(filename), 'Download failed!'
     return filename
 
 
 def download_and_upload_youtube_video(
-        date_str: str,
-        url: str,
-        fake_download=False,
-        fake_upload=False) -> dict:
+    storage_name:str,
+    date_str: str,
+    url: str) -> dict:
 
-    ydl_opts = {'simulate': True} if fake_download else None
-    filename = download_youtube_video(url, ydl_opts)
+    filename = download_youtube_video(url)
 
     if not os.path.isfile(filename):
         raise FileNotFoundError(filename)
 
-    if fake_upload:
-        remote_filename = os.path.join(HOMEWORK_ROOT, date_str, os.path.basename(filename))
-        baidu_storage = BaiduCloudStorage()
-        baidu_storage.upload(filename, remote_filename)
-        if not baidu_storage.file_exists(remote_filename):
-            raise RuntimeError('upload %s failed!' % remote_filename)
+    remote_filename = os.path.join(HOMEWORK_ROOT, date_str,
+        os.path.basename(filename))
+    storage = get_storage(storage_name)
+    storage.upload(filename, remote_filename)
+    if not storage.file_exists(remote_filename):
+        raise RuntimeError('upload %s failed!' % remote_filename)
 
     return {
         'url': url,
@@ -353,9 +356,10 @@ class LocalStorage(object):
             remotepath += os.path.basename(filename)
         remotepath = self._fullpath(remotepath)
 
-        parent_dir, basename = os.path.split(remotepath)
-        if os.path.isdir(parent_dir):
+        parent_dir, _ = os.path.split(remotepath)
+        if not os.path.isdir(parent_dir):
             os.makedirs(parent_dir)
+
 
         if os.path.isfile(filename):
             shutil.copyfile(filename, remotepath)

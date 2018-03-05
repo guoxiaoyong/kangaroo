@@ -25,37 +25,13 @@ flags.DEFINE_string(
 flags.DEFINE_boolean(
     "update_storage",
     True,
-    "Update homework in Baidu cloud storage."
+    "Update homework in storage."
 )
 
 flags.DEFINE_boolean(
     "get_video",
     True,
     "Download videos"
-)
-
-flags.DEFINE_boolean(
-    "fake_upload_video",
-    True,
-    "Do not upload videos to Baidu, but generate a shell script to to so."
-)
-
-flags.DEFINE_boolean(
-    "ignore_downloaded_list",
-    True,
-    "Do not check downloaded video list."
-)
-
-flags.DEFINE_boolean(
-    "fake_download_video",
-    True,
-    "Do not download videos from youtube."
-)
-
-flags.DEFINE_boolean(
-    "ignore_baidu",
-    True,
-    "Do not check data in Baidu storage."
 )
 
 
@@ -80,10 +56,10 @@ def show_latest_homework():
             print(text)
 
 
-def update_storage_homework(storage_name):
+def update_storage_homework(storage_name, force=False):
     cal = util.retrieve_managebac_calendar()
     storage_cal = util.retrieve_storage_calendar(storage_name)
-    if cal == storage_cal:
+    if force or cal == storage_cal:
         return
 
     storage_ops = util.get_storage_ops(storage_name)
@@ -135,28 +111,20 @@ def download_and_upload_youtube_video(ignore_downloaded_list, fake_download, fak
             wfile.write(shell_script)
 
 
-def download_youtube_video(fake_download):
+def download_youtube_video(storage_name):
     cal = util.retrieve_managebac_calendar()
     event_dict = util.calendar_to_list_of_dicts(cal)
     today = datetime.datetime.today().date()
-    shell_script = '!/usr/bin/bash\n\n'  # if fake_upload is False, not used.
+    storage_ops = get_storage_ops(storage_name)
 
     for date_str, events in event_dict.items():
         event_date = datetime.datetime.strptime(date_str, '%Y%m%d').date()
         if event_date >= today:
-            to_be_downloaded = util.retrieve_homework_youtube_video_list_by_date(date_str, 'managebac')
+            to_be_downloaded = storage_ops.get_videos_to_be_downloaded(date_str)
             for url in to_be_downloaded:
                 video_info = util.download_and_upload_youtube_video(
-                    date_str, url,
-                    fake_download=fake_download,
-                    fake_upload=True)
+                    storage_name, date_str, url)
 
-                filename = video_info['filename']
-                remote_filename = os.path.join(util.HOMEWORK_ROOT, date_str, filename)
-                shell_script += 'bypy upload "%s" "%s"\n' % (filename, remote_filename)
-
-    with open('baidu_upload.sh', 'wt') as wfile:
-        wfile.write(shell_script)
 
 
 def main(argv):
@@ -169,10 +137,8 @@ def main(argv):
     if flags.FLAGS.update_storage:
         update_storage_homework(flags.FLAGS.storage_name)
 
-    '''
     if flags.FLAGS.get_video:
-        download_youtube_video(flags.FLAGS.fake_download_video)
-    '''
+        download_youtube_video(lags.FLAGS.storage_name)
 
 
 if __name__ == '__main__':
