@@ -3,12 +3,14 @@
 import atexit
 import datetime
 import errno
+import glob
+import io
 import json
 import os
 import shutil
+import sys
 import tempfile
 import typing
-import glob
 
 import bypy
 import icalendar
@@ -185,11 +187,6 @@ class StorageOps(object):
         return (homework_video_set - downloaded_video_set,
                 downloaded_video_list)
 
-    def update_downloaded_video_list(self, video_list: list, date_str: str):
-        video_json_file = self.get_downloaded_video_list_filepath(date_str)
-        video_list_json = json.dumps(video_list)
-        self._storage.upload_bytes(video_list_json, video_json_file)
-
     def update_calendar(self, ical_text):
         calendar_path = self.get_calendar_filepath()
         self._storage.upload_contents(ical_text, calendar_path)
@@ -198,6 +195,11 @@ class StorageOps(object):
         homework_json_file = self.get_homework_json_filepath(date_str)
         homework_json = json.dumps(homework_dict, indent=2)
         self._storage.upload_contents(homework_json, homework_json_file)
+
+    def update_downloaded(self, downloaded_list, date_str: str):
+        downloaded_json_file = self.get_downloaded_video_list_filepath(date_str)
+        downloaded_json = json.dumps(downloaded_list, indent=2)
+        self._storage.upload_contents(downloaded_json, downloaded_json_file)
 
 
 @cachetools.func.lru_cache(maxsize=64)
@@ -239,18 +241,33 @@ def download_youtube_video(url: str, ydl_opts=None) -> str:
     return filename
 
 
-def download_and_upload_youtube_video(
-    storage_name:str,
-    date_str: str,
-    url: str) -> dict:
+def get_youtube_video_filename(url: str) -> str:
+    ydl_opts = {
+        'forcefilename': True,
+        'simulate': True,
+    }
+
+    old_sys_stdout = sys.stdout
+    sys.stdout = io.StringIO()
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([url])
+    stdout_text = sys.stdout.getvalue()
+    sys.stdout = old_sys_stdout  # Restore sys.stdout
+    for line in reversed(stdout_text.split('\n')):
+        line = line.strip()
+        if len(line) > 0:
+            return line
+    raise RuntimeError('Cannot get video filename!')
+
+
+def download_and_upload_youtube_video(storage_name: str, date_str: str, url: str) -> dict:
 
     filename = download_youtube_video(url)
 
     if not os.path.isfile(filename):
         raise FileNotFoundError(filename)
 
-    remote_filename = os.path.join(HOMEWORK_ROOT, date_str,
-        os.path.basename(filename))
+    remote_filename = os.path.join(HOMEWORK_ROOT, date_str, os.path.basename(filename))
     storage = get_storage(storage_name)
     storage.upload(filename, remote_filename)
     if not storage.file_exists(remote_filename):
@@ -360,7 +377,6 @@ class LocalStorage(object):
         parent_dir, _ = os.path.split(remotepath)
         if not os.path.isdir(parent_dir):
             os.makedirs(parent_dir)
-
 
         if os.path.isfile(filename):
             shutil.copyfile(filename, remotepath)

@@ -36,24 +36,28 @@ flags.DEFINE_boolean(
 
 
 def one_day_events_to_text(events):
-    text = ''
+    text = []
     for event in events:
-        text += 'Date time: %s\n' % event['human_readable_time']
-        text += 'Summary: %s\n' % event['summary']
-        text += 'Description:\n%s\n' % event['description']
-    return text
+        if 'ES Menu' in event['summary']:
+            continue
+        text.append('='*16)
+        text.append('Date time: %s' % event['human_readable_time'])
+        text.append('Summary: %s' % event['summary'])
+        text.append('Description:\n%s\n\n' % event['description'])
+    return '\n'.join(text)
 
 
-def show_latest_homework():
+def get_latest_homework():
     cal = util.retrieve_managebac_calendar()
     event_dict = util.calendar_to_list_of_dicts(cal)
     today = datetime.datetime.today().date()
+    text_list = []
     for date_str, events in event_dict.items():
         event_date = datetime.datetime.strptime(date_str, '%Y%m%d').date()
         if event_date >= today:
             text = one_day_events_to_text(events)
-            print('='*16)
-            print(text)
+            text_list.append(text)
+    return '\n'.join(text_list)
 
 
 def update_storage_homework(storage_name, force=False):
@@ -127,6 +131,7 @@ def download_youtube_video(storage_name):
                     storage_name, date_str, url)
                 downloaded_video_list.append(video_info)
             # update download_video_list
+            storage_ops.update_download(downloaded_video_list)
 
 
 
@@ -135,7 +140,7 @@ def main(argv):
     util.set_timezone_to_shanghai()
 
     if flags.FLAGS.show:
-        show_latest_homework()
+        print(get_latest_homework())
 
     if flags.FLAGS.update_storage:
         update_storage_homework(flags.FLAGS.storage_name)
