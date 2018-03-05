@@ -30,7 +30,7 @@ flags.DEFINE_boolean(
 
 flags.DEFINE_boolean(
     "get_video",
-    True,
+    False,
     "Download videos"
 )
 
@@ -115,15 +115,18 @@ def download_youtube_video(storage_name):
     cal = util.retrieve_managebac_calendar()
     event_dict = util.calendar_to_list_of_dicts(cal)
     today = datetime.datetime.today().date()
-    storage_ops = get_storage_ops(storage_name)
+    storage_ops = util.get_storage_ops(storage_name)
 
     for date_str, events in event_dict.items():
         event_date = datetime.datetime.strptime(date_str, '%Y%m%d').date()
         if event_date >= today:
-            to_be_downloaded = storage_ops.get_videos_to_be_downloaded(date_str)
+            to_be_downloaded, downloaded_video_list = \
+                storage_ops.get_videos_to_be_downloaded(date_str)
             for url in to_be_downloaded:
                 video_info = util.download_and_upload_youtube_video(
                     storage_name, date_str, url)
+                downloaded_video_list.append(video_info)
+            # update download_video_list
 
 
 
@@ -138,7 +141,7 @@ def main(argv):
         update_storage_homework(flags.FLAGS.storage_name)
 
     if flags.FLAGS.get_video:
-        download_youtube_video(lags.FLAGS.storage_name)
+        download_youtube_video(flags.FLAGS.storage_name)
 
 
 if __name__ == '__main__':

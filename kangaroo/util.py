@@ -164,7 +164,7 @@ class StorageOps(object):
     def retrieve_downloaded_video_list(self, date_str: str):
         video_json_file = self.get_downloaded_video_list_filepath(date_str)
         if not self._storage.file_exists(video_json_file):
-            return dict()
+            return []
 
         video_json = self._storage.load(video_json_file)
         video_dict = json.loads(video_json)
@@ -175,6 +175,7 @@ class StorageOps(object):
         #     'url': 'https://www.yutube.com/ABCDEFD'
         #     'filename': 'Video File Name.ABCDEF.mp4'
         #   },
+        # ]
         return video_dict
 
     def get_videos_to_be_downloaded(self, date_str: str):
