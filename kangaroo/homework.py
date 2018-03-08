@@ -30,7 +30,7 @@ flags.DEFINE_boolean(
 
 flags.DEFINE_boolean(
     "get_video",
-    False,
+    True,
     "Download videos"
 )
 
@@ -131,7 +131,7 @@ def download_youtube_video(storage_name):
                     storage_name, date_str, url)
                 downloaded_video_list.append(video_info)
             # update download_video_list
-            storage_ops.update_download(downloaded_video_list)
+            storage_ops.update_downloaded(downloaded_video_list, date_str)
 
 
 
