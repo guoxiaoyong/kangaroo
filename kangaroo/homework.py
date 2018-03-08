@@ -1,8 +1,6 @@
 # Author: Xiaoyong Guo
 # Date: 2018-03-01
 
-import json
-import os
 import sys
 import datetime
 
@@ -54,20 +52,13 @@ def get_latest_homework():
     return '\n'.join(text_list)
 
 
-def update_storage_homework(storage_name, force=False):
+def update_repo_homework():
     cal = util.retrieve_managebac_calendar()
-    storage_cal = util.retrieve_storage_calendar(storage_name)
-    if force or cal == storage_cal:
-        return
-
-    storage_ops = util.get_storage_ops(storage_name)
-    storage_ops.update_calendar(cal.to_ical())
+    util.update_calendar(cal)
 
     event_dict = util.calendar_to_list_of_dicts(cal)
     for date_str, events in event_dict.items():
-        remote_events = storage_ops.retrieve_homework_dict(date_str)
-        if events != remote_events:
-            storage_ops.update_homework(events, date_str)
+        util.update_homework(events, date_str)
 
 
 def download_youtube_video(specified_date_str=None):
@@ -76,34 +67,33 @@ def download_youtube_video(specified_date_str=None):
     today = datetime.datetime.today().date()
 
     def condition(date):
-      if specified_date_str:
-        return specified_date == data.strftime('%Y%m%d')
-      else:
-        return date >= today
+        if specified_date_str:
+            return specified_date_str == date.strftime('%Y%m%d')
+        else:
+            return date >= today
 
     for date_str, events in event_dict.items():
         event_date = datetime.datetime.strptime(date_str, '%Y%m%d').date()
         if condition(event_date):
-            to_be_downloaded = extract_youtube_video_list_from_description(events['description'])
+            to_be_downloaded = util.extract_youtube_video_list_from_description(events['description'])
             downloaded_list = []
             for url in to_be_downloaded:
-              video_info = {
-                  'url': url,
-                  'filename': filename,
-              }
-              downloaded_list.append(video_info)
-
+                filename = util.download_youtube_video(url)
+                video_info = {
+                    'url': url,
+                    'filename': filename,
+                }
+                downloaded_list.append(video_info)
+            util.update_downloaded(downloaded_list, date_str)
 
 
 def main(argv):
     flags.FLAGS(argv)
     util.set_timezone_to_shanghai()
+    update_repo_homework()
 
     if flags.FLAGS.show:
         print(get_latest_homework())
-
-    if flags.FLAGS.update_storage:
-        update_storage_homework(flags.FLAGS.storage_name)
 
     if flags.FLAGS.get_video:
         download_youtube_video(flags.FLAGS.storage_name)
