@@ -12,7 +12,6 @@ import sys
 import tempfile
 import typing
 
-import bypy
 import icalendar
 import requests
 import pytz
@@ -47,16 +46,6 @@ def retrieve_managebac_calendar(timeout=20) -> icalendar.Calendar:
     cal_text = requests.get(GET_ICAL_URL, timeout=timeout).text
     cal = icalendar.Calendar.from_ical(cal_text)
     return cal
-
-
-# Return storage.
-@cachetools.func.lru_cache(maxsize=64)
-def get_storage(name):
-    storage = {
-        'baidu': BaiduCloudStorage(),
-        'local': LocalStorage(),
-    }
-    return storage[name]
 
 
 def retrieve_storage_calendar(storage_name: str) -> icalendar.Calendar:
@@ -202,15 +191,6 @@ class StorageOps(object):
         self._storage.upload_contents(downloaded_json, downloaded_json_file)
 
 
-@cachetools.func.lru_cache(maxsize=64)
-def get_storage_ops(storage_name):
-    storage_ops = {
-        'baidu': StorageOps('baidu'),
-        'local': StorageOps('local'),
-    }
-    return storage_ops[storage_name]
-
-
 def download_youtube_video(url: str, ydl_opts=None) -> str:
     if ydl_opts:
         ydl_opts = ydl_opts.copy()
@@ -281,61 +261,6 @@ def download_and_upload_youtube_video(storage_name: str, date_str: str, url: str
 
 def set_timezone_to_shanghai():
     os.environ['TZ'] = 'Asia/Shanghai'
-
-
-class BaiduCloudStorage(object):
-    _name = 'baidu'
-
-    def __init__(self):
-        self._bypy = bypy.ByPy()
-
-    @property
-    def name(self):
-        return type(self)._name
-
-    def upload(self, filename: str, remotepath: str = ''):
-        if os.path.isfile(filename):
-            self._bypy.upload(filename, remotepath)
-        else:
-            raise FileNotFoundError(filename)
-
-    def upload_bytes(self, contents, remotepath: str):
-        if isinstance(contents, str):
-            contents = contents.encode()
-
-        with ScopedTempDir() as temp_dir:
-            local_file = os.path.join(temp_dir, 'tempfile')
-            with open(local_file, 'wb') as wfile:
-                wfile.write(contents)
-            assert os.path.isfile(local_file), '%s not found!' % local_file
-            self._bypy.upload(local_file, remotepath)
-
-    def upload_contents(self, contents, remote_path: str):
-        self.upload_bytes(contents, remote_path)
-
-    def download(self, filepath: str, localpath: str = ''):
-        self._bypy.download(filepath, localpath)
-
-    def download_as_bytes(self, filepath: str):
-        if not self.file_exists(filepath):
-            return b''
-
-        with ScopedTempDir() as temp_dir:
-            local_file = os.path.join(temp_dir, 'tempfile')
-            self._bypy.download(filepath, local_file)
-            with open(local_file, 'rb') as rfile:
-                contents = rfile.read()
-        return contents
-
-    def file_exists(self, filepath):
-        return self._bypy.meta(filepath) == 0
-
-    def makedir(self, dir_name: str) -> None:
-        if self.file_exists(dir_name):
-            return
-        else:
-            res = self._bypy.mkdir(dir_name)
-            assert res == 0
 
 
 class LocalStorage(object):
@@ -425,36 +350,3 @@ class LocalStorage(object):
                 pass
             else:
                 raise
-
-
-class ScopedTempDir(object):
-    def __init__(self, suffix='', parent_dir=None):
-        self._suffix = suffix
-        self._parent_dir = parent_dir
-        self._dir = None
-        self._entered = False
-
-    def __enter__(self):
-        self._dir = tempfile.mkdtemp(self._suffix, dir=self._parent_dir)
-        atexit.register(self._ensure_tmp_dir_removed)
-        return self._dir
-
-    def __exit__(self, exc_type, exc_value, traceback):
-        self._ensure_tmp_dir_removed()
-
-    def _ensure_tmp_dir_removed(self):
-        if self._dir:
-            shutil.rmtree(self._dir)
-            self._dir = None
-
-    def take(self):
-        if self._entered:
-            raise Exception('Wrong usage!')
-        self._entered = True
-        return self.__enter__()
-
-    def release(self):
-        if not self._entered:
-            raise Exception('Wrong usage!')
-        self._entered = False
-        self.__exit__(None, None, None)
