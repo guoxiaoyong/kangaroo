@@ -380,6 +380,38 @@ DESCRIPTION:1、朗读第三课三遍。\n2、完成第三课写字本A。
  \n3、抄写第三课词语。
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Sneezing
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180312T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180312T095900
+UID:19541734
+DESCRIPTION:Dear Families\,\n\nAs some people do not cover their mouths wh
+ en they sneeze\, I'd like you to watch these short videos at home and disc
+ uss them with your child. Does sneezing in your elbow help? Could sneezing
+  be a big problem?\n\nWhat Happens to Your Body When You Sneeze?\nhttps://
+ www.youtube.com/watch?v=cusEzVxqTE8\n\nWhat Is the Best Way to Sneeze?\nht
+ tps://www.youtube.com/watch?v=cQOSh6GLa_w\n\n12-Year-Old Sneezes 12\,000 T
+ imes Per Day\nhttps://www.youtube.com/watch?v=duiNVWE0KH4\n\nHave a sneeze
+  free weekend!\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Unit 7 Review
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180312T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180312T095900
+UID:19541856
+DESCRIPTION:Dear Families\,\n\nWe finished Unit 7 and review paper was sen
+ t home today. As some students "forgot" to take it home\, kindly find it a
+ ttached to the email. I hope everyone will remember to bring it to school 
+ on Monday.\n\nHave a productive weekend.\n\nSincerely\, Ms.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第三课 小黑鱼
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180312T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180312T095900
+UID:19540339
+DESCRIPTION:1、完成第三课练习本。\n2、预习古诗《绝句二
+ 首》。\n3、下周一默写第一、二课词语。
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:ES Menu
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
