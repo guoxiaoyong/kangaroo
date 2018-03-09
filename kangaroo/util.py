@@ -115,12 +115,25 @@ def get_calendar_filepath():
     return os.path.join(HOMEWORK_ROOT, 'calendar.ics')
 
 
+def force_mkdir(func):
+    def update_file(*args, **kwargs):
+        try:
+            func(*args, **kwargs)
+        except FileNotFoundError as exc:
+            dirname = os.path.dirname(exc.filename)
+            os.makedirs(dirname)
+            func(*args, **kwargs)
+    return update_file
+
+
+@force_mkdir
 def update_calendar(cal: icalendar.Calendar):
     calendar_path = get_calendar_filepath()
     with open(calendar_path, 'w') as wfile:
-        wfile.write(cal.to_ical())
+        wfile.write(cal.to_ical().decode())
 
 
+@force_mkdir
 def update_homework(homework_list, date_str: str):
     homework_json_file = get_homework_json_filepath(date_str)
     homework_json = json.dumps(homework_list, indent=2)
@@ -128,6 +141,7 @@ def update_homework(homework_list, date_str: str):
         wfile.write(homework_json)
 
 
+@force_mkdir
 def update_downloaded(downloaded_list, date_str: str):
     downloaded_json_file = get_downloaded_video_list_filepath(date_str)
     downloaded_json = json.dumps(downloaded_list, indent=2)
@@ -166,9 +180,16 @@ def download_youtube_video(url: str, ydl_opts=None) -> str:
 
 
 def get_youtube_video_filename(url: str) -> str:
+    postprocessors = [{
+        'key': 'FFmpegVideoConvertor',
+        'preferedformat': 'mp4',
+    }]
+
     ydl_opts = {
         'forcefilename': True,
         'simulate': True,
+        'postprocessors': postprocessors,
+        'prefer_ffmpeg': True,
     }
 
     old_sys_stdout = sys.stdout
@@ -180,7 +201,8 @@ def get_youtube_video_filename(url: str) -> str:
     for line in reversed(stdout_text.split('\n')):
         line = line.strip()
         if len(line) > 0:
-            return line
+            basename, ext = os.path.splitext(line)
+            return "%s.mp4" % basename
     raise RuntimeError('Cannot get video filename!')
 
 
