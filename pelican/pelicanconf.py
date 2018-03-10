@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Guo Xiaoyong'
 SITENAME = 'FDIS G2 Kangaroo Homework'
-#SITEURL = '/kangaroo'
+SITEURL = ''  # dev environment, will be overriden by publishconf.py
 THEME = 'themes/bricks'
 
 PATH = 'content'
