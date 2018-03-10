@@ -12,4 +12,4 @@ the content will be published here.
 
 If there are youtube video links found in the homework assignment,
 the program will automatically download these videos and upload them to
-[Baidu cloud storage](http://www.baidu.com).
+[Baidu cloud storage](https://pan.baidu.com/s/1DnNp9VrFSWz3B_ZGNQA9zg).

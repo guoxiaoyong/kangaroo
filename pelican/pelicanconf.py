@@ -26,14 +26,17 @@ EXTRA_PATH_METADATA = {
 }
 
 # Blogroll
-LINKS = (('ManageBac', 'https://fudan.managebac.com/'),
-         ('FDIS', 'http://www.fdis.net.cn/'),)
+LINKS = (
+    ('Video Link', 'https://pan.baidu.com/s/1DnNp9VrFSWz3B_ZGNQA9zg'),
+    ('ManageBac', 'https://fudan.managebac.com/'),
+    ('FDIS', 'http://www.fdis.net.cn/'),
+)
 
 # Social widget
 SOCIAL = (('github', 'http://www.github.com/guoxiaoyong'),
-('twitter', 'http://twitter.com'),)
+          ('twitter', 'http://twitter.com'),)
 
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
