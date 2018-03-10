@@ -1,29 +1,32 @@
 # Author: Guo Xiaoyong
 # Date: 2018-03-09
 
-import os
-import util
 import glob
 import json
+import os
+
 import dateutil.parser
 
-def process_http(line):
-  words = line.split()
-  url_list = []
-  for word in words:
-    if word.startswith('http://') or word.startswith('https://'):
-      url_list.append(word)
+import util
 
-  for url in url_list:
-    new_word = '[%s](%s)' % (url, url)
-    line = line.replace(url, new_word)
-  return line
+
+def process_http(line):
+    words = line.split()
+    url_list = []
+    for word in words:
+        if word.startswith('http://') or word.startswith('https://'):
+            url_list.append(word)
+
+    for url in url_list:
+        new_word = '[%s](%s)' % (url, url)
+        line = line.replace(url, new_word)
+    return line
 
 
 def process_desc(text):
-  lines = text.split('\n')
-  lines = [process_http(line) for line in lines]
-  return '\n\n'.join(lines)
+    lines = text.split('\n')
+    lines = [process_http(line) for line in lines]
+    return '\n\n'.join(lines)
 
 
 def generate_blog_content(date_str: str):

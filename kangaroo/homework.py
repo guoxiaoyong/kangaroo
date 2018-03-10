@@ -9,7 +9,6 @@ import absl.flags as flags
 
 import util
 
-
 flags.DEFINE_boolean(
     "get_video",
     False,
@@ -23,9 +22,9 @@ flags.DEFINE_string(
 )
 
 
-def get_latest_date(next: int = 0):
+def get_latest_date(next_day: int = 0):
     today = datetime.datetime.today().date()
-    return today + datetime.timedelta(days=next)
+    return today + datetime.timedelta(days=next_day)
 
 
 def one_day_events_to_text(events):
@@ -33,7 +32,7 @@ def one_day_events_to_text(events):
     for event in events:
         if 'ES Menu' in event['summary']:
             continue
-        text.append('='*16)
+        text.append('=' * 16)
         text.append('Date time: %s' % event['human_readable_time'])
         text.append('Summary: %s' % event['summary'])
         text.append('Description:\n%s\n\n' % event['description'])
@@ -70,8 +69,8 @@ def update_repo_homework():
 
 
 def download_youtube_video(
-    specified_date_str: Union[str, None] = None,
-    download: bool = True):
+        specified_date_str: Union[str, None] = None,
+        download: bool = True):
     cal = util.retrieve_managebac_calendar()
     event_dict = util.calendar_to_list_of_dicts(cal)
     latest_date = get_latest_date()
