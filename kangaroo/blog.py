@@ -7,6 +7,24 @@ import glob
 import json
 import dateutil.parser
 
+def process_http(line):
+  words = line.split()
+  url_list = []
+  for word in words:
+    if word.startswith('http://') or word.startswith('https://'):
+      url_list.append(word)
+
+  for url in url_list:
+    new_word = '[%s](%s)' % (url, url)
+    line = line.replace(url, new_word)
+  return line
+
+
+def process_desc(text):
+  lines = text.split('\n')
+  lines = [process_http(line) for line in lines]
+  return '\n\n'.join(lines)
+
 
 def generate_blog_content(date_str: str):
     homework_json_file = util.get_homework_json_filepath(date_str)
@@ -17,7 +35,8 @@ def generate_blog_content(date_str: str):
     for event in event_list:
         if 'ES Menu' in event['summary']:
             continue
-        content.append('## %s\n\n%s\n' % (event['summary'], event['description']))
+        desc = process_desc(event['description'])
+        content.append('## %s\n\n%s\n' % (event['summary'], desc))
     return '\n'.join(content)
 
 

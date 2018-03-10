@@ -4,7 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Guo Xiaoyong'
 SITENAME = 'FDIS G2 Kangaroo Homework'
-SITEURL = ''
+#SITEURL = '/kangaroo'
+THEME = 'themes/bricks'
 
 PATH = 'content'
 
@@ -19,15 +20,18 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+STATIC_PATHS = {'images', 'extra/favicon.ico'}
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico': {'path': 'favicon.ico'}
+}
+
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (('ManageBac', 'https://fudan.managebac.com/'),
+         ('FDIS', 'http://www.fdis.net.cn/'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('github', 'http://www.github.com/guoxiaoyong'),
+('twitter', 'http://twitter.com'),)
 
 DEFAULT_PAGINATION = False
 
