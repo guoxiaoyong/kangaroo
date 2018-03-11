@@ -118,6 +118,9 @@ cf_upload: publish
 	cd $(OUTPUTDIR) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .
 
 github: publish
+	echo "fdis.guoxiaoyong.com" > output/CNAME
+	mkdir -p output/kangaroo
+	cp -r output/theme output/kangaroo/
 	python ../kangaroo/patch_css.py
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push origin $(GITHUB_PAGES_BRANCH)
