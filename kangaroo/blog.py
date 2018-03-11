@@ -34,12 +34,17 @@ def generate_blog_content(date_str: str):
     dt = dateutil.parser.parse(date_str)
     with open(homework_json_file, 'r') as rfile:
         event_list = json.load(rfile)
+
+    if not event_list:
+        return None
+
     content = ['Title: %s Homework\nDate: %s\n\n' % (date_str, dt)]
     for event in event_list:
         if 'ES Menu' in event['summary']:
             continue
         desc = process_desc(event['description'])
         content.append('## %s\n\n%s\n' % (event['summary'], desc))
+
     return '\n'.join(content)
 
 
@@ -50,6 +55,10 @@ def main():
             continue
         date_str = os.path.basename(fullpath)
         text = generate_blog_content(date_str)
+
+        if text is None:
+            continue
+
         filename = os.path.join(
             util.get_repo_path(), 'pelican', 'content',
             'blog', '%s.md' % date_str)
