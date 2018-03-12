@@ -129,7 +129,7 @@ def force_mkdir(func):
 @force_mkdir
 def update_calendar(cal: icalendar.Calendar):
     calendar_path = get_calendar_filepath()
-    with open(calendar_path, 'w') as wfile:
+    with open(calendar_path, 'w', encoding='utf8') as wfile:
         wfile.write(cal.to_ical().decode())
 
 
@@ -137,7 +137,7 @@ def update_calendar(cal: icalendar.Calendar):
 def update_homework(homework_list, date_str: str):
     homework_json_file = get_homework_json_filepath(date_str)
     homework_json = json.dumps(homework_list, indent=2)
-    with open(homework_json_file, 'w') as wfile:
+    with open(homework_json_file, 'w', encoding='utf8') as wfile:
         wfile.write(homework_json)
 
 
@@ -145,7 +145,7 @@ def update_homework(homework_list, date_str: str):
 def update_downloaded(downloaded_list, date_str: str):
     downloaded_json_file = get_downloaded_video_list_filepath(date_str)
     downloaded_json = json.dumps(downloaded_list, indent=2)
-    with open(downloaded_json_file, 'w') as wfile:
+    with open(downloaded_json_file, 'w', encoding='utf8') as wfile:
         wfile.write(downloaded_json)
 
 

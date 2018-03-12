@@ -13,26 +13,6 @@ TZOFFSETTO:+0800
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-SUMMARY:A Note for Managebac 
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180211T080000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180211T085900
-UID:18380565
-DESCRIPTION:Dear parents\,\n\nWe are very happy that most parents are usin
- g Managebac to keep in touch with their Homeroom teachers through portfoli
- o.\nAt the same time\, here is a request from the school that please avoid
-  clicking "Notify by email" when you reply any notes from the teacher on M
- anagebac because every teacher who has taught your kid will receive the re
- minder email that may not protect your kids' private matter. You can eithe
- r send a message on Wechat or write a short email to remind the homeroom t
- eacher to check your reply.\n\n我们很高兴家长们使用系统的功
- 能与班主任老师保持联系。现在学校有一个新的要求，
- 希望家长们在发布和回复班主任老师的消息时不要选择
- 通过邮件提醒这一选项，为了保护你孩子的隐私也避免
- 让其它与内容不相干的老师们收到通知。\n\nThank you for yo
- ur cooperation!\n谢谢大家的配合！\nES Dean's office\n小学主任
- 办公室
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Q3-Q4 ASA Result
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T095900
