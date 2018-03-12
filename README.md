@@ -1,3 +1,3 @@
 # Kangaroo
 
-An automatic youtube video downloader.
+Kangaroo website and util tools.
