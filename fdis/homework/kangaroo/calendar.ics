@@ -32,34 +32,6 @@ DESCRIPTION:Friction song:\nhttps://www.youtube.com/watch?v=TkXAJHitPAY\n\
  NMCFcKXvQodSKUI-Q&ss=sub&st=tab&tpr=sbt&trs=wtt\n\n\n
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Stars
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T095900
-UID:19220748
-DESCRIPTION:What Are Stars?\nhttps://www.youtube.com/watch?v=ZrS3Ye8p61Y\n
- \nFormation of the Solar System\nhttps://www.youtube.com/watch?v=IRZYMimUE
- T8\n\nSTARS\nhttps://www.youtube.com/watch?v=lSuAPFMXcYM\n\nBLACK HOLE\nht
- tps://www.youtube.com/watch?v=X4fcI4PMvwg\n\nComets\nhttps://www.youtube.c
- om/watch?v=-_6nYgel4JI\n\nConstellations: Connect the Dots in the Sky!\nht
- tps://www.youtube.com/watch?v=1sZ15SUeS9w\n\nWhy Can I See the Moon During
-  the Day?\nhttps://www.youtube.com/watch?v=-Oyv3Qg4a8k\n\nWhat Is the Milk
- y Way?\nhttps://www.youtube.com/watch?v=ppajpMosxQI\n\n
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Earth + Extreme Weather 
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T095900
-UID:19220752
-DESCRIPTION:Structure Of The Earth\nhttps://www.youtube.com/watch?v=eXiVGE
- EPQ6c\n\nTypes Of Rocks\nhttps://www.youtube.com/watch?v=CeuYx-AbZdo\n\nTy
- pes Of Clouds\nhttps://www.youtube.com/watch?v=yod3wMbFHUY\n\nWhat Is An E
- arthquake?\nhttps://www.youtube.com/watch?v=dJpIU1rSOFY\n\nTsunami \nhttps
- ://www.youtube.com/watch?v=MfsugkikLJI\n\nHurricane\nhttps://www.youtube.c
- om/watch?v=J2__Bk4dVS0\n\nFLOODS\nhttps://www.youtube.com/watch?v=9hQZCiZ2
- 1fk\n\nLayers Of Atmosphere\nhttps://www.youtube.com/watch?v=5sg9sCOXFIk\n
- \nWhy Is the Sky Blue?\nhttps://www.youtube.com/watch?v=bcVr13Fw7w8\n\n
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:寒假作业
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T095900
@@ -392,9 +364,132 @@ DESCRIPTION:1、完成第三课练习本。\n2、预习古诗《绝句二
  首》。\n3、下周一默写第一、二课词语。
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Kids A-Z Classroom Activity
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T095900
+UID:19559849
+DESCRIPTION:Dear Families\,\nKindly make sure your child gets some time to
+  read books online:\n\nhttps://www.kidsa-z.com/main/Login\n\n\nSincerely\,
+ \nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Egg Shell Pots
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T095900
+UID:19559925
+DESCRIPTION:Dear Families\,\n\nIf your child would like to take part in pl
+ anting this spring\, kindly save egg shells (see the photos attached). I u
+ sed scissors to cut the washed eggs open.\n\nPlease\, note that this is no
+ t an obligation as it's not a TS topic now. It's fine if your child doesn'
+ t want to take part.\n\nFor those who want to\, I am looking forward to pl
+ anting with your child during play time at school this week!\n\nYour conti
+ nuous support is always appreciated.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Light/ Shadow video links and materials
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T095900
+UID:19557060
+DESCRIPTION:Dear Families\,\n\nWe started learning about light today. Stud
+ ents talked about luminous (give out light) and non-luminous objects\, tra
+ nsparent (light can travel through) and opaque (stops the light) objects. 
+ Today Kangaroos had an experiment to find out what happens when the sun is
+  blocked by an opaque object. \n\nEvery student is asked to bring a piece 
+ of transparent\, a semi-transparent\, and opaque material/ object to schoo
+ l this week. \n\nI have one torch in our class students could share. If yo
+ u have a torch you could send to school and let your child have experiment
+ s with light till Friday\, kindly do so.\n\nHere are the video links to th
+ e videos your child could re-watch at home:\n\nShadow | The Dr. Binocs Sho
+ w | Educational Videos For Kids\nhttps://www.youtube.com/watch?v=lOIGOT88A
+ qc\n\nLight | The Dr. Binocs Show | Learn Videos For Kids\nhttps://www.you
+ tube.com/watch?v=d7yTlp4gBTI\n\nLight | Videos for Kids\nhttps://www.youtu
+ be.com/watch?v=fvKpqIS9k9Y\n\nYour support is appreciated at all times.\n\
+ nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:《绝句二首》
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T095900
+UID:19555568
+DESCRIPTION:1、完成《绝句二首》写字本A并背诵。\n2、按要
+ 求预习第四课。\n3、完成练习本、
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Extra Biographies
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T095900
+UID:19557778
+DESCRIPTION:Dear Families\,\n\nAs readers compare and contrast the main po
+ ints of two sources on the same topic\, kindly find extra biographies atta
+ ched. Each student has been working on one person for the last two weeks. 
+ \n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:ES Menu
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
 UID:19538518
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Stars
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T095900
+UID:19220748
+DESCRIPTION:What Are Stars?\nhttps://www.youtube.com/watch?v=ZrS3Ye8p61Y\n
+ \nFormation of the Solar System\nhttps://www.youtube.com/watch?v=IRZYMimUE
+ T8\n\nSTARS\nhttps://www.youtube.com/watch?v=lSuAPFMXcYM\n\nBLACK HOLE\nht
+ tps://www.youtube.com/watch?v=X4fcI4PMvwg\n\nComets\nhttps://www.youtube.c
+ om/watch?v=-_6nYgel4JI\n\nConstellations: Connect the Dots in the Sky!\nht
+ tps://www.youtube.com/watch?v=1sZ15SUeS9w\n\nWhy Can I See the Moon During
+  the Day?\nhttps://www.youtube.com/watch?v=-Oyv3Qg4a8k\n\nWhat Is the Milk
+ y Way?\nhttps://www.youtube.com/watch?v=ppajpMosxQI\n\nLunar + Solar Eclip
+ se\nhttps://www.youtube.com/watch?v=LH-aSizsx1o\n\nhttps://www.youtube.com
+ /watch?v=E6OtLfszaVI
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Earth + Extreme Weather 
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180409T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180409T095900
+UID:19220752
+DESCRIPTION:Structure Of The Earth\nhttps://www.youtube.com/watch?v=eXiVGE
+ EPQ6c\n\nTypes Of Rocks\nhttps://www.youtube.com/watch?v=CeuYx-AbZdo\n\nTy
+ pes Of Clouds\nhttps://www.youtube.com/watch?v=yod3wMbFHUY\n\nWhat Is An E
+ arthquake?\nhttps://www.youtube.com/watch?v=dJpIU1rSOFY\n\nTsunami \nhttps
+ ://www.youtube.com/watch?v=MfsugkikLJI\n\nHurricane\nhttps://www.youtube.c
+ om/watch?v=J2__Bk4dVS0\n\nFLOODS\nhttps://www.youtube.com/watch?v=9hQZCiZ2
+ 1fk\n\nLayers Of Atmosphere\nhttps://www.youtube.com/watch?v=5sg9sCOXFIk\n
+ \nWhy Is the Sky Blue?\nhttps://www.youtube.com/watch?v=bcVr13Fw7w8\n\nLAN
+ DSLIDE - The Dr. Binocs Show | Best Learning Videos For Kids | Peekaboo Ki
+ dz\nhttps://www.youtube.com/watch?v=krJLnXpemtQ\n\nClimate Zones of the Ea
+ rth - The Dr. Binocs Show | Best Learning Videos For kids | Dr Binocs\nhtt
+ ps://www.youtube.com/watch?v=5tC8OOxOFEk\n\n
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Structure Of The Earth + Rocks + Soil
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180416T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180416T095900
+UID:19559792
+DESCRIPTION:Structure Of The Earth | The Dr. Binocs Show | Educational Vid
+ eos For Kids\nhttps://www.youtube.com/watch?v=eXiVGEEPQ6c\n\nVolcano | The
+  Dr. Binocs Show | Learn Videos For Kids\nhttps://www.youtube.com/watch?v=
+ lAmqsMQG3RM\n\nTypes Of Rocks | The Dr. Binocs Show | Learn Videos For Kid
+ s\nhttps://www.youtube.com/watch?v=CeuYx-AbZdo\n\nLayers Of Soil - The Dr.
+  Binocs Show | Best Learning Videos For Kids | Peekaboo Kidz\nhttps://www.
+ youtube.com/watch?v=bgqea0E2eAY\n\nVinegar Volcano - Fun Science Fair Proj
+ ect\nhttps://www.youtube.com/watch?v=Uw8bkc-nR9U
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Water Cycle
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180430T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180430T095900
+UID:19559380
+DESCRIPTION:The Water Cycle | The Dr. Binocs Show | Learn Videos For Kids\
+ nhttps://www.youtube.com/watch?v=ncORPosDrjI\n\nThe Water Cycle\nhttp://ww
+ w.sciencekids.co.nz/sciencefacts/weather/thewatercycle.html\n\nWhere Does 
+ Water Come From?\nhttps://www.youtube.com/watch?v=R0K7VKkksyc\n\nWater Cyc
+ le Song Video\nhttps://www.youtube.com/watch?v=TWb4KlM2vts\n\nThe Water Cy
+ cle\nhttp://www.ducksters.com/science/the_water_cycle.php\n\nThe Water Cyc
+ le | Educational Video for Kids\nhttps://www.youtube.com/watch?v=y5gFI3pMv
+ oI
 END:VEVENT
 END:VCALENDAR
