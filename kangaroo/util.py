@@ -175,7 +175,8 @@ def download_youtube_video(url: str, ydl_opts=None) -> str:
         info_dict = json.load(rfile)
         filename = info_dict['_filename']
     os.remove(info_json_files[0])
-    assert os.path.isfile(filename), 'Download failed!'
+    if not os.path.isfile(filename):
+        sys.stderr.write('Download failed!\n')
     return filename
 
 

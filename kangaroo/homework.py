@@ -22,7 +22,7 @@ flags.DEFINE_string(
 )
 
 
-def get_latest_date(next_day: int = 0):
+def get_latest_date(next_day: int = 1):
     today = datetime.datetime.today().date()
     return today + datetime.timedelta(days=next_day)
 
