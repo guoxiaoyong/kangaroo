@@ -425,6 +425,29 @@ DESCRIPTION:Dear Families\,\n\nAs readers compare and contrast the main po
  \n\nSincerely\,\nMs.L
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Egg Shell Planting
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T095900
+UID:19572971
+DESCRIPTION:Dear Families\,\n\nPlease\, see the egg shell planting team in
+  the photos attached. If your child wants to join in\, it's never too late
+  during this week :-)\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Big Taking Photos Day (April 3)
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T095900
+UID:19573180
+DESCRIPTION:Dear Families\,\n\nThe Big Photo Day is coming: Kangaroo class
+  photo\, All School photo\, and Individual photos. Each student will be as
+ ked to have a white top and a black bottom for the official whole school p
+ hoto\, and Kangaroos are going to pick the topic of our class photo theme 
+ this week for you to support them and have clothes ready on April 3rd.\n\n
+ Kindly keep in mind that it is a full School Day.\n\nYour support is great
+ ly appreciated at all times!\n\nSincerely\,\nMs.L\n\nApril 3: Class Pictur
+ e\, All School Photo\, Indiv Photo. Full School Day
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Fractions
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T095900
@@ -432,6 +455,14 @@ UID:19571433
 DESCRIPTION:Dear Families\,\n\nWe worked on fractions today. Unit 8 practi
  ce materials with answers were sent home today.\n\nHave a nice week.\n\nSi
  ncerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第四课 沙滩上的童话
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180315T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180315T095900
+UID:19581481
+DESCRIPTION:1、完成第四课练习本。\n2、周五默写第三、四
+ 课词语。
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:ES Menu
@@ -454,6 +485,26 @@ DESCRIPTION:What Are Stars?\nhttps://www.youtube.com/watch?v=ZrS3Ye8p61Y\n
  y Way?\nhttps://www.youtube.com/watch?v=ppajpMosxQI\n\nLunar + Solar Eclip
  se\nhttps://www.youtube.com/watch?v=LH-aSizsx1o\n\nhttps://www.youtube.com
  /watch?v=E6OtLfszaVI
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Wearing Book Week Costumes on March 30th
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T095900
+UID:19572825
+DESCRIPTION:Dear Families\,\n\nI am writing a reminder that it is our annu
+ al Book Week celebration on March 30th. Families will be invited to school
+  to celebrate. We will finalize details soon!\n\nThe tradition is for chil
+ dren to come dressed as their favorite book characters. Please\, start to 
+ prepare a costume. It can be bought or made.\n\nLooking forward to meeting
+  all the different book characters on March 30th!\n\nSincerely\,\nMs.L on 
+ behalf of Ms.Alexis
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Assessment Week: April 2-4
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
+UID:19573202
+DESCRIPTION:Quarter 3 Assessment\n
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Earth + Extreme Weather 
