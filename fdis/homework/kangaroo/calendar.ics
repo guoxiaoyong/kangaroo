@@ -471,6 +471,44 @@ DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
 UID:19538518
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Use appropriate non-verbal communication with others
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
+UID:19595352
+DESCRIPTION:Saying What You Mean - A Children's Book About Communication S
+ kills\nhttps://www.youtube.com/watch?v=1hnLfnulwZw\n\nNonverbal Communicat
+ ion- Facial Expressions\nhttps://www.youtube.com/watch?v=AZ57TkiFVCc\n\nNo
+ nverbal Communication\nhttps://www.youtube.com/watch?v=iEdMwMRMnzg
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:语文快乐宫1
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
+UID:19592581
+DESCRIPTION:1、完成练习本。\n2、朗读语文快乐宫1第五题小
+ 诗歌3遍。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:About Payment
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
+UID:19592775
+DESCRIPTION:Dear Parents\,\n\nKindly confirm your registration for Wednesd
+ ay soccer class with Sport For Life.\n\nThere is 3 ways to make Payment fo
+ r the class:\n\n1) \n\nPlease make the bank transfer to SFL company accoun
+ t as below\,\n\nAccount number: 6222021001122678144\n\nName: MICHAEL NIKOS
+  TSESMELIS\n\nBank: ICBC 上海工商银行华山路支行\n\n*If making a
+  bank transfer\, please send us the screenshot of the transaction in order
+  for us to confirm the payment*\n\n2)\n\nOr you can pay thru Alipay支付
+ 宝 to account: amy@sportforlife.com.cn 上海来福体育管理咨询有
+ 限公司. Please fill Chinese character “上”  in the box if a messag
+ e pop up to ask for the company name when you are processing.\n\n 3)\n\nOr
+  you can make a cash payment to coach Sam at Wednesdays class.\n\n\nShould
+  you have any question\, please feel free to contact us.\n\n \n\n Check mo
+ re about Sport for Life program policy online at http://sportforlife.com.c
+ n/program-policy/\n\nBest Regards\n\n Sport For Life Team
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Stars
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T095900
