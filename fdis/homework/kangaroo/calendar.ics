@@ -434,20 +434,6 @@ DESCRIPTION:Dear Families\,\n\nPlease\, see the egg shell planting team in
   during this week :-)\n\nSincerely\,\nMs.L
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Big Taking Photos Day (April 3)
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T095900
-UID:19573180
-DESCRIPTION:Dear Families\,\n\nThe Big Photo Day is coming: Kangaroo class
-  photo\, All School photo\, and Individual photos. Each student will be as
- ked to have a white top and a black bottom for the official whole school p
- hoto\, and Kangaroos are going to pick the topic of our class photo theme 
- this week for you to support them and have clothes ready on April 3rd.\n\n
- Kindly keep in mind that it is a full School Day.\n\nYour support is great
- ly appreciated at all times!\n\nSincerely\,\nMs.L\n\nApril 3: Class Pictur
- e\, All School Photo\, Indiv Photo. Full School Day
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Fractions
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T095900
@@ -481,6 +467,17 @@ DESCRIPTION:Saying What You Mean - A Children's Book About Communication S
  nverbal Communication\nhttps://www.youtube.com/watch?v=iEdMwMRMnzg
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Shadow Puppets
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
+UID:19595369
+DESCRIPTION:The 3 Little Piggies - Shadow Puppets Film-making workshop\nht
+ tps://www.youtube.com/watch?v=iCmFWJjc4RA\n\nHow To Make Shadow Puppets Wi
+ th Your Hand\nhttps://www.youtube.com/watch?v=Kz8wP2RYy64\n\nHow To - Kenn
+ eth Wingard's DIY Shadow Puppet Theater - Home & Family\nhttps://www.youtu
+ be.com/watch?v=BHw-4UOcj40\n\n
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:语文快乐宫1
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
@@ -509,6 +506,127 @@ DESCRIPTION:Dear Parents\,\n\nKindly confirm your registration for Wednesd
  n/program-policy/\n\nBest Regards\n\n Sport For Life Team
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:STEM reflections_1
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
+UID:19605565
+DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
+ eations today. Each student is asked to reflect on the process and materia
+ ls used while creating musical instruments and shadows + what went well du
+ ring performance + what should be changed for the next time. \n\nLooking f
+ orward to listening to your child's reflections on Monday.\n\nHave a nice 
+ weekend.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:STEM reflections_4
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
+UID:19605604
+DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
+ eations today. Each student is asked to reflect on the process and materia
+ ls used while creating musical instruments and shadows + what went well du
+ ring performance + what should be changed for the next time. \n\nLooking f
+ orward to listening to your child's reflections on Monday.\n\nHave a nice 
+ weekend.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:STEM reflections_3
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
+UID:19605608
+DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
+ eations today. Each student is asked to reflect on the process and materia
+ ls used while creating musical instruments and shadows + what went well du
+ ring performance + what should be changed for the next time. \n\nLooking f
+ orward to listening to your child's reflections on Monday.\n\nHave a nice 
+ weekend.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:STEM reflections_2
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
+UID:19605623
+DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
+ eations today. Each student is asked to reflect on the process and materia
+ ls used while creating musical instruments and shadows + what went well du
+ ring performance + what should be changed for the next time. \n\nLooking f
+ orward to listening to your child's reflections on Monday.\n\nHave a nice 
+ weekend.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:STEM reflections_5
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
+UID:19605806
+DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
+ eations today. Each student is asked to reflect on the process and materia
+ ls used while creating musical instruments and shadows + what went well du
+ ring performance + what should be changed for the next time. \n\nLooking f
+ orward to listening to your child's reflections on Monday.\n\nHave a nice 
+ weekend.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:STEM reflections_1_2
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
+UID:19605817
+DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
+ eations today. Each student is asked to reflect on the process and materia
+ ls used while creating musical instruments and shadows + what went well du
+ ring performance + what should be changed for the next time. \n\nLooking f
+ orward to listening to your child's reflections on Monday.\n\nHave a nice 
+ weekend.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:STEM reflections_2
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
+UID:19605829
+DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
+ eations today. Each student is asked to reflect on the process and materia
+ ls used while creating musical instruments and shadows + what went well du
+ ring performance + what should be changed for the next time. \n\nLooking f
+ orward to listening to your child's reflections on Monday.\n\nHave a nice 
+ weekend.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:看图写话
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
+UID:19602487
+DESCRIPTION:1、看图写话一则。\n2、按要求预习第七课。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第七课 海中救援
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180320T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180320T095900
+UID:19621448
+DESCRIPTION:1、朗读第七课三遍。\n2、完成第七课写字本A。
+ \n3、抄写第七课词语。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ES Menu
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180323T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180323T095900
+UID:19602493
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Earth Hour: Switch Off on March 24 at 8:30 pm
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180324T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180324T095900
+UID:19620796
+DESCRIPTION:Dear Families\,\n\nAs one of the skills for Quarter 3 is to id
+ entify a way you can help improve at least your local community\, we canno
+ t help but take part in celebrating Earth Hour by switching electricity of
+ f on March 24 at 8:30 pm. Kindly support your child in having activities t
+ hat do not require using electricity for one hour this Saturday. Please\, 
+ take a photo of your child celebrating Earth Hour. Every student is asked 
+ to make a poster using the photo(s). A poster sample is attached.\n\nFor m
+ ore information\, please\, use the link: \n\nhttps://www.earthhour.org/\n\
+ nLooking forward in getting all the marvelous posters on March 26th!\n\nCh
+ ange Climate Change Together :-)\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Stars
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T095900
@@ -523,6 +641,18 @@ DESCRIPTION:What Are Stars?\nhttps://www.youtube.com/watch?v=ZrS3Ye8p61Y\n
  y Way?\nhttps://www.youtube.com/watch?v=ppajpMosxQI\n\nLunar + Solar Eclip
  se\nhttps://www.youtube.com/watch?v=LH-aSizsx1o\n\nhttps://www.youtube.com
  /watch?v=E6OtLfszaVI
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Volunteer to help out at home in a way that goes beyond what you a
+ re expected to do.
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180329T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180329T095900
+UID:19620767
+DESCRIPTION:Dear Families\,\n\nYour child is going to come up with some ac
+ tivities to do to help out at home. Get ready to take photos as we need ev
+ idence :-)\n\nEnjoy all the extra help from the bottom of your child's hea
+ rt :-)\n\nKindly send evidence with captions describing what is happening 
+ in the photos as a poster to school.\n\nSincerely\,\nMs.L
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Wearing Book Week Costumes on March 30th
@@ -543,6 +673,20 @@ DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
 UID:19573202
 DESCRIPTION:Quarter 3 Assessment\n
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Big Taking Photos Day (April 3)
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180403T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180403T095900
+UID:19573180
+DESCRIPTION:Dear Families\,\n\nThe Big Photo Day is coming: Kangaroo class
+  photo\, All School photo\, and Individual photos. Each student will be as
+ ked to have a white top and a black bottom for the official whole school p
+ hoto\, and Kangaroos are going to be dressed up as Bees\, Kangaroos or Flo
+ wers. Kindly support your child and make sure the outfits are ready by Apr
+ il 3rd.\n\nKindly keep in mind that it is a full School Day.\n\nYour suppo
+ rt is greatly appreciated at all times!\n\nSincerely\,\nMs.L\n\nApril 3: C
+ lass Picture\, All School Photo\, Indiv Photo. Full School Day
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Earth + Extreme Weather 
