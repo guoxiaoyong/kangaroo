@@ -605,10 +605,31 @@ DESCRIPTION:1、朗读第七课三遍。\n2、完成第七课写字本A。
  \n3、抄写第七课词语。
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Unit 8 Review
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180322T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180322T095900
+UID:19634763
+DESCRIPTION:Dear Families\,\n\nYour child got a handout to review Unit 8 m
+ ath problems today. We are going to check it on Thursday. Students have 2 
+ days to do both sides. Make sure your child takes it back to school on Thu
+ rsday.\n\nAppreciated in advance.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:ES Menu
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180323T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180323T095900
 UID:19602493
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Renewable Energy: Solar\, Wind\, Hydro (water)
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180323T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180323T095900
+UID:19634854
+DESCRIPTION:Renewable Energy\nhttps://www.youtube.com/watch?v=1kUE0BZtTRc\
+ n\nAlternative Energy vs. Fossil Fuels\nhttps://www.youtube.com/watch?v=Vo
+ IX1ohX7jc\n\nWhat is Solar Energy?\nhttps://www.youtube.com/watch?v=inPtRW
+ tvDaM\n\nTop 10 Renewable energy sources\nhttps://www.youtube.com/watch?v=
+ 8bkyEE2j3qw
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Earth Hour: Switch Off on March 24 at 8:30 pm
