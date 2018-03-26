@@ -664,6 +664,16 @@ DESCRIPTION:Dear Families\,\n\nAs one of the skills for Quarter 3 is to id
  ange Climate Change Together :-)\n\nSincerely\,\nMs.L
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Fraction video links
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T095900
+UID:19665703
+DESCRIPTION:Fractions Song For Kids\nhttps://www.youtube.com/watch?v=lTce7
+ f6KGE0\n\nIntro to Fractions: All About Fractions for Kids - FreeSchool\nh
+ ttps://www.youtube.com/watch?v=yT1WuyxTCmo\n\nWhich Fraction is bigger\nht
+ tps://www.youtube.com/watch?v=wBZ5pO2x79E
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Stars
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T095900
@@ -680,6 +690,20 @@ DESCRIPTION:What Are Stars?\nhttps://www.youtube.com/watch?v=ZrS3Ye8p61Y\n
  /watch?v=E6OtLfszaVI
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Renewable Energy Vocabulary
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T095900
+UID:19665284
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:《游园不值》
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T095900
+UID:19665916
+DESCRIPTION:1、完成《游园不值》写字本B并背诵。\n2、完成
+ 练习本。\n3、周一默写第七、九课词语。
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Volunteer to help out at home in a way that goes beyond what you a
  re expected to do.
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180329T090000
@@ -690,6 +714,12 @@ DESCRIPTION:Dear Families\,\n\nYour child is going to come up with some ac
  idence :-)\n\nEnjoy all the extra help from the bottom of your child's hea
  rt :-)\n\nKindly send evidence with captions describing what is happening 
  in the photos as a poster to school.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ES Menu
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T095900
+UID:19665891
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Wearing Book Week Costumes on March 30th
@@ -705,11 +735,90 @@ DESCRIPTION:Dear Families\,\n\nI am writing a reminder that it is our annu
  behalf of Ms.Alexis
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Book Week Picnic: March 30th\, Friday\, 2:00 - 3:00 pm
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T095900
+UID:19674175
+DESCRIPTION:Dear Families\,\n\nThe Book Week Picnic is going to happen fro
+ m 2:00 to 3:00 at our campus. Kindly bring a book\, rug\, and snack. Pleas
+ e\, write an email to natalya_fdis@rambler.ru if you or anyone from your f
+ amily is NOT coming on Friday. It will allow us to set a job for your chil
+ d to be busy with or get to sit with another family.\n\nIn case AQI is too
+  high or it is raining\, Kangaroos (both Families and children) move to Ro
+ om A114 to enjoy picnic in our classroom.\n\nLooking forward to meeting lo
+ ts of students dressed up as their favorite book characters. Your child sh
+ ould be ready to say a couple of facts about their character!\n\nYour cont
+ inuous support is greatly appreciated.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Book Reviews and Book Trailers
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T095900
+UID:19665231
+DESCRIPTION:Spaghetti® Book Club\nhttp://www.spaghettibookclub.org/title.
+ php?grade=&first_letter=a\n\nHarry Bliss - Bailey\nhttps://www.youtube.com
+ /watch?v=E8jrJP41L3k\n\nThe Recess Queen\nhttps://www.youtube.com/watch?v=
+ V_kj5ZLrIJw\n\nSkippy Jon Jones\nhttps://www.youtube.com/watch?v=cVuqm4r92
+ I0
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:March 30th: Book Week Costume
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T095900
+UID:19665272
+DESCRIPTION:Dear Families\,\n\nI am writing to remind you that we are goin
+ g to celebrate Book Week on March 30th\, Friday. Each student is asked to 
+ dress up as a favorite character from a book. Costumes could be bought or 
+ hand-made.\n\nLooking forward to meeting different book characters on Frid
+ ay!\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Assessment Week: April 2-4
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
 UID:19573202
 DESCRIPTION:Quarter 3 Assessment\n
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Q3 Homeroom Exam Topics
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
+UID:19658448
+DESCRIPTION:•	Identify a situation you want to change \n•	Make a plan 
+ for how to improve your performance in a school subject/ how to achieve a 
+ personal goal.\n•	Discuss how to be a good friend.\n•	Use appropriate 
+ non-verbal communication with others (e.g.\, movements\, gestures\, postur
+ e\, facial expressions).\n•	Identify a way you can help improve your loc
+ al/global community.\n•	Volunteer to help out at home in a way that goes
+  beyond what you are expected to do.\n
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Q3 Assessment
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
+UID:19678938
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Q3 Math Exam Topics
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
+UID:19658430
+DESCRIPTION:Grade 2 Quarter 3 Math Exam Rubric\n\nE: 90%-100%\nM: 75%-89%\
+ nD: 55%-74%\nN: 35%-54%\nU: 0%-34%\n\nTopics tested:\nA. Write number mode
+ ls\nB. Make a bar graph\nC. Double numbers\nD. Read and write fractions\nE
+ . Degrees of certainty\nF. Lines of symmetry\nG. Use pictures to compare f
+ ractions\nH. Share things equally\n
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Q3 TS Exam Topics
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
+UID:19658436
+DESCRIPTION:Grade 2 Quarter 3 TS Exam Quiz Rubric\n\nE: 90%-100%\nM: 75%-8
+ 9%\nD: 55%-74%\nN: 35%-54%\nU: 0%-34%\n\nTopics tested:\nA. Forces and Mot
+ ion\nB. Gravity\nC. Friction\nD. Simple Machines: Lever\, Pulley\, Ramp (i
+ nclined plane)\, Wheel and Axle\, Wedge\, Screw\nE. Sound\nF. Light\nG. Re
+ newable Energy: Solar\, Wind\, Hydro (water)\n
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:The Big Taking Photos Day (April 3)
