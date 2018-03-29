@@ -13,33 +13,6 @@ TZOFFSETTO:+0800
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-SUMMARY:Q3-Q4 ASA Result
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T095900
-UID:19251758
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Friction
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T095900
-UID:19220566
-DESCRIPTION:Friction song:\nhttps://www.youtube.com/watch?v=TkXAJHitPAY\n\
- nA World Without Friction:\nhttps://www.youtube.com/watch?v=VUfqjSeeZng\n\
- nScience_8_Types of Friction:\nhttps://www.youtube.com/watch?v=9XtGJXVnQxk
- \n\n\nBill Nye: Friction:\nhttp://int.search.myway.com/search/video.jhtml?
- n=7839a0b1&p2=%5EY6%5Exdm269%5ETTAB02%5Ecn&pg=video&pn=1&ptb=942655D2-F75C
- -4AB6-8175-A3C32A6A2F8E&qs=&searchfor=friction+bill+nye+video&si=CNCU-4j7w
- NMCFcKXvQodSKUI-Q&ss=sub&st=tab&tpr=sbt&trs=wtt\n\n\n
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:寒假作业
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180226T095900
-UID:19217905
-DESCRIPTION:1、造句-15句。（练习本上）\n2、随笔2则。（看
- 图写话本上）
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Heart 2 Heart: We partially sponsored a heart surgery
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180228T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180228T095900
@@ -704,6 +677,21 @@ DESCRIPTION:1、完成《游园不值》写字本B并背诵。\n2、完成
  练习本。\n3、周一默写第七、九课词语。
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:第十课 迷人的蝴蝶谷
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180327T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180327T095900
+UID:19680251
+DESCRIPTION:1、朗读第十课三遍。\n2、完成第十课写字本B。
+ \n3、抄写第十课词语。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:text 10
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180328T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180328T095900
+UID:19687219
+DESCRIPTION:read text 10  and try to recite it
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Volunteer to help out at home in a way that goes beyond what you a
  re expected to do.
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180329T090000
@@ -714,6 +702,13 @@ DESCRIPTION:Dear Families\,\n\nYour child is going to come up with some ac
  idence :-)\n\nEnjoy all the extra help from the bottom of your child's hea
  rt :-)\n\nKindly send evidence with captions describing what is happening 
  in the photos as a poster to school.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:语文快乐宫2
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180329T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180329T095900
+UID:19694112
+DESCRIPTION:1、完成练习本。\n2、按要求预习第十三课。
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:ES Menu
@@ -749,6 +744,14 @@ DESCRIPTION:Dear Families\,\n\nThe Book Week Picnic is going to happen fro
  ts of students dressed up as their favorite book characters. Your child sh
  ould be ready to say a couple of facts about their character!\n\nYour cont
  inuous support is greatly appreciated.\n\nSincerely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第十三课 我给奶奶送阳光
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T095900
+UID:19701063
+DESCRIPTION:1、朗读第十三课三遍。\n2、完成第十三课写字
+ 本A。\n3、抄写第十三课词语。
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Book Reviews and Book Trailers
