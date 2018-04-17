@@ -13,180 +13,6 @@ TZOFFSETTO:+0800
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-SUMMARY:Sneezing
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180312T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180312T095900
-UID:19541734
-DESCRIPTION:Dear Families\,\n\nAs some people do not cover their mouths wh
- en they sneeze\, I'd like you to watch these short videos at home and disc
- uss them with your child. Does sneezing in your elbow help? Could sneezing
-  be a big problem?\n\nWhat Happens to Your Body When You Sneeze?\nhttps://
- www.youtube.com/watch?v=cusEzVxqTE8\n\nWhat Is the Best Way to Sneeze?\nht
- tps://www.youtube.com/watch?v=cQOSh6GLa_w\n\n12-Year-Old Sneezes 12\,000 T
- imes Per Day\nhttps://www.youtube.com/watch?v=duiNVWE0KH4\n\nHave a sneeze
-  free weekend!\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Unit 7 Review
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180312T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180312T095900
-UID:19541856
-DESCRIPTION:Dear Families\,\n\nWe finished Unit 7 and review paper was sen
- t home today. As some students "forgot" to take it home\, kindly find it a
- ttached to the email. I hope everyone will remember to bring it to school 
- on Monday.\n\nHave a productive weekend.\n\nSincerely\, Ms.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:第三课 小黑鱼
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180312T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180312T095900
-UID:19540339
-DESCRIPTION:1、完成第三课练习本。\n2、预习古诗《绝句二
- 首》。\n3、下周一默写第一、二课词语。
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Kids A-Z Classroom Activity
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T095900
-UID:19559849
-DESCRIPTION:Dear Families\,\nKindly make sure your child gets some time to
-  read books online:\n\nhttps://www.kidsa-z.com/main/Login\n\n\nSincerely\,
- \nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Egg Shell Pots
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T095900
-UID:19559925
-DESCRIPTION:Dear Families\,\n\nIf your child would like to take part in pl
- anting this spring\, kindly save egg shells (see the photos attached). I u
- sed scissors to cut the washed eggs open.\n\nPlease\, note that this is no
- t an obligation as it's not a TS topic now. It's fine if your child doesn'
- t want to take part.\n\nFor those who want to\, I am looking forward to pl
- anting with your child during play time at school this week!\n\nYour conti
- nuous support is always appreciated.\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Light/ Shadow video links and materials
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T095900
-UID:19557060
-DESCRIPTION:Dear Families\,\n\nWe started learning about light today. Stud
- ents talked about luminous (give out light) and non-luminous objects\, tra
- nsparent (light can travel through) and opaque (stops the light) objects. 
- Today Kangaroos had an experiment to find out what happens when the sun is
-  blocked by an opaque object. \n\nEvery student is asked to bring a piece 
- of transparent\, a semi-transparent\, and opaque material/ object to schoo
- l this week. \n\nI have one torch in our class students could share. If yo
- u have a torch you could send to school and let your child have experiment
- s with light till Friday\, kindly do so.\n\nHere are the video links to th
- e videos your child could re-watch at home:\n\nShadow | The Dr. Binocs Sho
- w | Educational Videos For Kids\nhttps://www.youtube.com/watch?v=lOIGOT88A
- qc\n\nLight | The Dr. Binocs Show | Learn Videos For Kids\nhttps://www.you
- tube.com/watch?v=d7yTlp4gBTI\n\nLight | Videos for Kids\nhttps://www.youtu
- be.com/watch?v=fvKpqIS9k9Y\n\nYour support is appreciated at all times.\n\
- nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:《绝句二首》
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T095900
-UID:19555568
-DESCRIPTION:1、完成《绝句二首》写字本A并背诵。\n2、按要
- 求预习第四课。\n3、完成练习本、
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Extra Biographies
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180313T095900
-UID:19557778
-DESCRIPTION:Dear Families\,\n\nAs readers compare and contrast the main po
- ints of two sources on the same topic\, kindly find extra biographies atta
- ched. Each student has been working on one person for the last two weeks. 
- \n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Egg Shell Planting
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T095900
-UID:19572971
-DESCRIPTION:Dear Families\,\n\nPlease\, see the egg shell planting team in
-  the photos attached. If your child wants to join in\, it's never too late
-  during this week :-)\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fractions
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180314T095900
-UID:19571433
-DESCRIPTION:Dear Families\,\n\nWe worked on fractions today. Unit 8 practi
- ce materials with answers were sent home today.\n\nHave a nice week.\n\nSi
- ncerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:第四课 沙滩上的童话
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180315T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180315T095900
-UID:19581481
-DESCRIPTION:1、完成第四课练习本。\n2、周五默写第三、四
- 课词语。
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ES Menu
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
-UID:19538518
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Use appropriate non-verbal communication with others
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
-UID:19595352
-DESCRIPTION:Saying What You Mean - A Children's Book About Communication S
- kills\nhttps://www.youtube.com/watch?v=1hnLfnulwZw\n\nNonverbal Communicat
- ion- Facial Expressions\nhttps://www.youtube.com/watch?v=AZ57TkiFVCc\n\nNo
- nverbal Communication\nhttps://www.youtube.com/watch?v=iEdMwMRMnzg
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Shadow Puppets
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
-UID:19595369
-DESCRIPTION:The 3 Little Piggies - Shadow Puppets Film-making workshop\nht
- tps://www.youtube.com/watch?v=iCmFWJjc4RA\n\nHow To Make Shadow Puppets Wi
- th Your Hand\nhttps://www.youtube.com/watch?v=Kz8wP2RYy64\n\nHow To - Kenn
- eth Wingard's DIY Shadow Puppet Theater - Home & Family\nhttps://www.youtu
- be.com/watch?v=BHw-4UOcj40\n\n
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:语文快乐宫1
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
-UID:19592581
-DESCRIPTION:1、完成练习本。\n2、朗读语文快乐宫1第五题小
- 诗歌3遍。
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:About Payment
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180316T095900
-UID:19592775
-DESCRIPTION:Dear Parents\,\n\nKindly confirm your registration for Wednesd
- ay soccer class with Sport For Life.\n\nThere is 3 ways to make Payment fo
- r the class:\n\n1) \n\nPlease make the bank transfer to SFL company accoun
- t as below\,\n\nAccount number: 6222021001122678144\n\nName: MICHAEL NIKOS
-  TSESMELIS\n\nBank: ICBC 上海工商银行华山路支行\n\n*If making a
-  bank transfer\, please send us the screenshot of the transaction in order
-  for us to confirm the payment*\n\n2)\n\nOr you can pay thru Alipay支付
- 宝 to account: amy@sportforlife.com.cn 上海来福体育管理咨询有
- 限公司. Please fill Chinese character “上”  in the box if a messag
- e pop up to ask for the company name when you are processing.\n\n 3)\n\nOr
-  you can make a cash payment to coach Sam at Wednesdays class.\n\n\nShould
-  you have any question\, please feel free to contact us.\n\n \n\n Check mo
- re about Sport for Life program policy online at http://sportforlife.com.c
- n/program-policy/\n\nBest Regards\n\n Sport For Life Team
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:STEM reflections_1
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
@@ -661,17 +487,26 @@ SUMMARY:Space Video Links
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180413T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180413T095900
 UID:19792160
-DESCRIPTION:The Solar System Song\nhttps://www.youtube.com/watch?v=BZ-qLUI
- j_A0\n\nSolar System/Solar System Song/Planets Song for Kids/8 Planets\nht
- tps://www.youtube.com/watch?v=mQrlgH97v94\n\nWhat is The Big Bang Theory |
-  Mocomi Kids\nhttps://www.youtube.com/watch?v=wtDTWYBTAGQ\n\nComets | The 
- Dr. Binocs Show | Educational Videos For Kids\nhttps://www.youtube.com/wat
- ch?v=-_6nYgel4JI\n\nMETEORS | The Dr. Binocs Show | Kids Learning Videos B
- y Peekaboo Kids\nhttps://www.youtube.com/watch?v=O4QrnC9vLs8\n\nBLACK HOLE
-  | The Dr. Binocs Show | Best Educational Videos for Kids | Peekaboo Kids\
- nhttps://www.youtube.com/watch?v=X4fcI4PMvwg\n\nStephen Hawking explains b
- lack holes in 90 seconds - BBC News\nhttps://www.youtube.com/watch?v=gU6yH
- XJuowU\n\n\n
+DESCRIPTION:"Outer Space" - StoryBots Super Songs Episode 1\nhttps://www.y
+ outube.com/watch?v=Heeq6RPA45s\n\nThe Solar System Song\nhttps://www.youtu
+ be.com/watch?v=BZ-qLUIj_A0\n\nSolar System/Solar System Song/Planets Song 
+ for Kids/8 Planets\nhttps://www.youtube.com/watch?v=mQrlgH97v94\n\nWhat is
+  The Big Bang Theory | Mocomi Kids\nhttps://www.youtube.com/watch?v=wtDTWY
+ BTAGQ\n\nComets | The Dr. Binocs Show | Educational Videos For Kids\nhttps
+ ://www.youtube.com/watch?v=-_6nYgel4JI\n\nMETEORS | The Dr. Binocs Show | 
+ Kids Learning Videos By Peekaboo Kids\nhttps://www.youtube.com/watch?v=O4Q
+ rnC9vLs8\n\nBLACK HOLE | The Dr. Binocs Show | Best Educational Videos for
+  Kids | Peekaboo Kids\nhttps://www.youtube.com/watch?v=X4fcI4PMvwg\n\nStep
+ hen Hawking explains black holes in 90 seconds - BBC News\nhttps://www.you
+ tube.com/watch?v=gU6yHXJuowU\n\n\n
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:The Grade 2 Q4 Newsletter
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180416T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180416T095900
+UID:19803788
+DESCRIPTION:Dear Families\,\n\nPlease\, find the Quarter 4 Newsletter atta
+ ched.\n\nSincerely\,\nMs.L
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Structure Of The Earth + Rocks + Soil
@@ -688,6 +523,28 @@ DESCRIPTION:Structure Of The Earth | The Dr. Binocs Show | Educational Vid
  ect\nhttps://www.youtube.com/watch?v=Uw8bkc-nR9U
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Black Holes links
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180416T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180416T095900
+UID:19802561
+DESCRIPTION:Black holes song:\nhttp://int.search.myway.com/search/video.jh
+ tml?searchfor=black+hole+Dr.Binocs&n=7839a0b1&p2=%5EY6%5Exdm269%5ETTAB02%5
+ Ecn&ptb=942655D2-F75C-4AB6-8175-A3C32A6A2F8E&qs=&si=CNCU-4j7wNMCFcKXvQodSK
+ UI-Q&ss=sub&st=tab&trs=wtt&tpr=sbt&ts=1523594009107\n\n\nWhat if there was
+  a black hole in your pocket?\nhttps://www.youtube.com/watch?v=8nHBGFKLHZQ
+ \n\n\nWhy Black Holes Could Delete The Universe – The Information Parado
+ x\nhttps://www.youtube.com/watch?v=yWO-cvGETRQ
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第十六课 做人的故事
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180416T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180416T095900
+UID:19802702
+DESCRIPTION:1、朗读第十六课三遍。\n2、完成第十六课写字
+ 本B。\n3、抄写第十六课词语。\n4、周一默写第13、14课词
+ 语。
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Sports Fun Afternoon: April 17\, 2018
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180417T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180417T095900
@@ -696,6 +553,20 @@ DESCRIPTION:Dear Families\,\n\nWe are going to have Sports Fun afternoon o
  n Tuesday\, April 17th. Every student is asked to wear their House T-shirt
  s that day.\n\nLooking forward to build up team spirit next week!\n\nSince
  rely\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第十六课 做人的故事
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180417T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180417T095900
+UID:19819793
+DESCRIPTION:1、完成第十六课练习本。\n2、语文快乐宫3第四
+ 题。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ES Menu
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180420T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180420T095900
+UID:19801542
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Water Cycle
