@@ -13,97 +13,6 @@ TZOFFSETTO:+0800
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-SUMMARY:STEM reflections_1
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
-UID:19605565
-DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
- eations today. Each student is asked to reflect on the process and materia
- ls used while creating musical instruments and shadows + what went well du
- ring performance + what should be changed for the next time. \n\nLooking f
- orward to listening to your child's reflections on Monday.\n\nHave a nice 
- weekend.\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:STEM reflections_4
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
-UID:19605604
-DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
- eations today. Each student is asked to reflect on the process and materia
- ls used while creating musical instruments and shadows + what went well du
- ring performance + what should be changed for the next time. \n\nLooking f
- orward to listening to your child's reflections on Monday.\n\nHave a nice 
- weekend.\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:STEM reflections_3
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
-UID:19605608
-DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
- eations today. Each student is asked to reflect on the process and materia
- ls used while creating musical instruments and shadows + what went well du
- ring performance + what should be changed for the next time. \n\nLooking f
- orward to listening to your child's reflections on Monday.\n\nHave a nice 
- weekend.\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:STEM reflections_2
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
-UID:19605623
-DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
- eations today. Each student is asked to reflect on the process and materia
- ls used while creating musical instruments and shadows + what went well du
- ring performance + what should be changed for the next time. \n\nLooking f
- orward to listening to your child's reflections on Monday.\n\nHave a nice 
- weekend.\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:STEM reflections_5
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
-UID:19605806
-DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
- eations today. Each student is asked to reflect on the process and materia
- ls used while creating musical instruments and shadows + what went well du
- ring performance + what should be changed for the next time. \n\nLooking f
- orward to listening to your child's reflections on Monday.\n\nHave a nice 
- weekend.\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:STEM reflections_1_2
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
-UID:19605817
-DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
- eations today. Each student is asked to reflect on the process and materia
- ls used while creating musical instruments and shadows + what went well du
- ring performance + what should be changed for the next time. \n\nLooking f
- orward to listening to your child's reflections on Monday.\n\nHave a nice 
- weekend.\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:STEM reflections_2
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
-UID:19605829
-DESCRIPTION:Dear Families\,\n\nStudents performed their sound and light cr
- eations today. Each student is asked to reflect on the process and materia
- ls used while creating musical instruments and shadows + what went well du
- ring performance + what should be changed for the next time. \n\nLooking f
- orward to listening to your child's reflections on Monday.\n\nHave a nice 
- weekend.\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:看图写话
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180319T095900
-UID:19602487
-DESCRIPTION:1、看图写话一则。\n2、按要求预习第七课。
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:第七课 海中救援
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180320T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180320T095900
@@ -563,10 +472,43 @@ DESCRIPTION:1、完成第十六课练习本。\n2、语文快乐宫3第四
  题。
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:语文快乐宫3
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180419T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180419T095900
+UID:19839540
+DESCRIPTION:1、按要求预习第十八课。\n2、语文快乐宫3 第
+ 五题。
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:ES Menu
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180420T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180420T095900
 UID:19801542
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第十八课 宝镜
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180420T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180420T095900
+UID:19849949
+DESCRIPTION:1、朗读第十八课三遍。\n2、完成第十八课写字
+ 本B。\n3、抄写第十八课词语。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第十八课 宝镜
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180423T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180423T095900
+UID:19859258
+DESCRIPTION:1、完成第十八课练习本。\n2、完成《大林寺桃
+ 花》写字本B并背诵。\n3、随笔一则。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Talent Show note and the audition form
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180427T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180427T095900
+UID:19850411
+DESCRIPTION:Dear parents\,\n\nAttached is the Talent show note and the aud
+ ition form from the Art department.\nShould you have any questions pls con
+ tact us. Thank you！
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Water Cycle
@@ -581,6 +523,42 @@ DESCRIPTION:The Water Cycle | The Dr. Binocs Show | Learn Videos For Kids\
  cle\nhttp://www.ducksters.com/science/the_water_cycle.php\n\nThe Water Cyc
  le | Educational Video for Kids\nhttps://www.youtube.com/watch?v=y5gFI3pMv
  oI
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Parent Teacher Conference-Electronic Appointment Link
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180502T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180502T095900
+UID:19859268
+DESCRIPTION:Dear elementary school families\,\n\nThis email has links to m
+ ake an appointment with your child's teacher for the Parent Teacher Confer
+ ence. Specialist teachers who teach a number of class across the school\, 
+ can be emailed should you wish to meet with them.\n\nParent Teacher Confer
+ ence is scheduled for Friday May 4\, 2018 from 2:00 p.m. onwards. This tim
+ e is dedicated to share feedback and report on academic and overall school
+  performance.\n\nThe links are available below: \nTeachers	Doodle links \n
+ Ms. Alba        https://doodle.com/poll/c3m9ivahcn68u5yr \nMr. Mathias    
+  https://doodle.com/poll/cgfvtrpap4237wik \nMs. Denise	https://doodle.com/
+ poll/2b7h8hzqhucb7pz4 \nMr. Dario	https://doodle.com/poll/a6akm4bx8qe85u95
+  \nMs. Alexis      https://doodle.com/poll/z3rm2ugbdvb4vtpe \nMs. Natalya 
+     https://doodle.com/poll/atvgdxur2cv4xs6k \nMr. Kyle        https://doo
+ dle.com/poll/64ub5q8txhyvwed3 \nMr. Michael     https://doodle.com/poll/ax
+ fr958w5mcmvqew \nMr. Robert      https://doodle.com/poll/fezcdxskp9sv4zys 
+ \nMs. Chloe	https://doodle.com/poll/bqsxknyy2vb37xqf \nMs. Vicky	https://d
+ oodle.com/poll/fh9eiu59uyvuy2i8 \nMr. Scott	https://doodle.com/poll/z59323
+ 5adwdiqgsh \nMs. Amy  	https://doodle.com/poll/nm5c52d5czngwids \nMs. Virg
+ inia	https://doodle.com/poll/8x6a9zkhkg6yaur2 \nMs. Scarlet	https://doodle
+ .com/poll/nfzb2ywzg9rbxisb \nMs. Fancy	https://doodle.com/poll/q4qisispei9
+ b97hi \nMs. Juice	https://doodle.com/poll/iz7hqfsger276h4z \nMs. Natasha	h
+ ttps://doodle.com/poll/xe4f5xv8bqmpvkrv\n\nteachers	emails \nMs. Yuan	6106
+ 36679@qq.com \nMr. Leo Yu	ylh.rocklife@aliyun.com \nMr. Jose Antoniojose-a
+ ntonio-correia@hotmail.com \nMr. Daniel	daniel_bishop@yahoo.com \nMs. Tina
+ 	598851209@qq.com \nMs. Holly	hollyderbyshire3@gmail.com \nLi Yong	orangej
+ uice888@sina.com\n\nIf there is a concern over your child's progress in an
+ y related subject \, you will receive a Progress Report prior to the Repor
+ t Card\, from the teacher before the end of next week.\n\nI hope this give
+ s you ample time to take time off to meet with your child's teacher. \nThe
+  document with the links is also listed in the attachment.\n\nHave a good 
+ day. \nKind regards\, \nMs. Natasha D'Costa \nHead of Elementary School.
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:MAP Test: Reading (May 9\, 12:15 - 13:40 pm)
