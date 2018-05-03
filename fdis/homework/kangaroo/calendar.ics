@@ -13,260 +13,6 @@ TZOFFSETTO:+0800
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-SUMMARY:第七课 海中救援
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180320T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180320T095900
-UID:19621448
-DESCRIPTION:1、朗读第七课三遍。\n2、完成第七课写字本A。
- \n3、抄写第七课词语。
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Unit 8 Review
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180322T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180322T095900
-UID:19634763
-DESCRIPTION:Dear Families\,\n\nYour child got a handout to review Unit 8 m
- ath problems today. We are going to check it on Thursday. Students have 2 
- days to do both sides. Make sure your child takes it back to school on Thu
- rsday.\n\nAppreciated in advance.\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:第九课 医生的心思
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180322T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180322T095900
-UID:19645753
-DESCRIPTION:1、朗读第九课三遍。\n2、完成第九课写字本A。
- \n3、抄写第九课词语。
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ES Menu
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180323T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180323T095900
-UID:19602493
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Renewable Energy: Solar\, Wind\, Hydro (water)
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180323T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180323T095900
-UID:19634854
-DESCRIPTION:Renewable Energy\nhttps://www.youtube.com/watch?v=1kUE0BZtTRc\
- n\nAlternative Energy vs. Fossil Fuels\nhttps://www.youtube.com/watch?v=Vo
- IX1ohX7jc\n\nWhat is Solar Energy?\nhttps://www.youtube.com/watch?v=inPtRW
- tvDaM\n\nTop 10 Renewable energy sources\nhttps://www.youtube.com/watch?v=
- 8bkyEE2j3qw
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:第九课 医生的心思
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180323T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180323T095900
-UID:19654338
-DESCRIPTION:1、完成第九课练习本。\n2、预习古诗《游园不
- 值》。
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Earth Hour: Switch Off on March 24 at 8:30 pm
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180324T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180324T095900
-UID:19620796
-DESCRIPTION:Dear Families\,\n\nAs one of the skills for Quarter 3 is to id
- entify a way you can help improve at least your local community\, we canno
- t help but take part in celebrating Earth Hour by switching electricity of
- f on March 24 at 8:30 pm. Kindly support your child in having activities t
- hat do not require using electricity for one hour this Saturday. Please\, 
- take a photo of your child celebrating Earth Hour. Every student is asked 
- to make a poster using the photo(s). A poster sample is attached.\n\nFor m
- ore information\, please\, use the link: \n\nhttps://www.earthhour.org/\n\
- nLooking forward in getting all the marvelous posters on March 26th!\n\nCh
- ange Climate Change Together :-)\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Fraction video links
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T095900
-UID:19665703
-DESCRIPTION:Fractions Song For Kids\nhttps://www.youtube.com/watch?v=lTce7
- f6KGE0\n\nIntro to Fractions: All About Fractions for Kids - FreeSchool\nh
- ttps://www.youtube.com/watch?v=yT1WuyxTCmo\n\nWhich Fraction is bigger\nht
- tps://www.youtube.com/watch?v=wBZ5pO2x79E
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Stars
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T095900
-UID:19220748
-DESCRIPTION:What Are Stars?\nhttps://www.youtube.com/watch?v=ZrS3Ye8p61Y\n
- \nFormation of the Solar System\nhttps://www.youtube.com/watch?v=IRZYMimUE
- T8\n\nSTARS\nhttps://www.youtube.com/watch?v=lSuAPFMXcYM\n\nBLACK HOLE\nht
- tps://www.youtube.com/watch?v=X4fcI4PMvwg\n\nComets\nhttps://www.youtube.c
- om/watch?v=-_6nYgel4JI\n\nConstellations: Connect the Dots in the Sky!\nht
- tps://www.youtube.com/watch?v=1sZ15SUeS9w\n\nWhy Can I See the Moon During
-  the Day?\nhttps://www.youtube.com/watch?v=-Oyv3Qg4a8k\n\nWhat Is the Milk
- y Way?\nhttps://www.youtube.com/watch?v=ppajpMosxQI\n\nLunar + Solar Eclip
- se\nhttps://www.youtube.com/watch?v=LH-aSizsx1o\n\nhttps://www.youtube.com
- /watch?v=E6OtLfszaVI
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Renewable Energy Vocabulary
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T095900
-UID:19665284
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:《游园不值》
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180326T095900
-UID:19665916
-DESCRIPTION:1、完成《游园不值》写字本B并背诵。\n2、完成
- 练习本。\n3、周一默写第七、九课词语。
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:第十课 迷人的蝴蝶谷
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180327T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180327T095900
-UID:19680251
-DESCRIPTION:1、朗读第十课三遍。\n2、完成第十课写字本B。
- \n3、抄写第十课词语。
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Volunteer to help out at home in a way that goes beyond what you a
- re expected to do.
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180329T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180329T095900
-UID:19620767
-DESCRIPTION:Dear Families\,\n\nYour child is going to come up with some ac
- tivities to do to help out at home. Get ready to take photos as we need ev
- idence :-)\n\nEnjoy all the extra help from the bottom of your child's hea
- rt :-)\n\nKindly send evidence with captions describing what is happening 
- in the photos as a poster to school.\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:语文快乐宫2
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180329T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180329T095900
-UID:19694112
-DESCRIPTION:1、完成练习本。\n2、按要求预习第十三课。
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ES Menu
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T095900
-UID:19665891
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Wearing Book Week Costumes on March 30th
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T095900
-UID:19572825
-DESCRIPTION:Dear Families\,\n\nI am writing a reminder that it is our annu
- al Book Week celebration on March 30th. Families will be invited to school
-  to celebrate. We will finalize details soon!\n\nThe tradition is for chil
- dren to come dressed as their favorite book characters. Please\, start to 
- prepare a costume. It can be bought or made.\n\nLooking forward to meeting
-  all the different book characters on March 30th!\n\nSincerely\,\nMs.L on 
- behalf of Ms.Alexis
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Book Week Picnic: March 30th\, Friday\, 2:00 - 3:00 pm
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T095900
-UID:19674175
-DESCRIPTION:Dear Families\,\n\nThe Book Week Picnic is going to happen fro
- m 2:00 to 3:00 at our campus. Kindly bring a book\, rug\, and snack. Pleas
- e\, write an email to natalya_fdis@rambler.ru if you or anyone from your f
- amily is NOT coming on Friday. It will allow us to set a job for your chil
- d to be busy with or get to sit with another family.\n\nIn case AQI is too
-  high or it is raining\, Kangaroos (both Families and children) move to Ro
- om A114 to enjoy picnic in our classroom.\n\nLooking forward to meeting lo
- ts of students dressed up as their favorite book characters. Your child sh
- ould be ready to say a couple of facts about their character!\n\nYour cont
- inuous support is greatly appreciated.\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:第十三课 我给奶奶送阳光
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T095900
-UID:19701063
-DESCRIPTION:1、朗读第十三课三遍。\n2、完成第十三课写字
- 本A。\n3、抄写第十三课词语。
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Book Reviews and Book Trailers
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T095900
-UID:19665231
-DESCRIPTION:Spaghetti® Book Club\nhttp://www.spaghettibookclub.org/title.
- php?grade=&first_letter=a\n\nHarry Bliss - Bailey\nhttps://www.youtube.com
- /watch?v=E8jrJP41L3k\n\nThe Recess Queen\nhttps://www.youtube.com/watch?v=
- V_kj5ZLrIJw\n\nSkippy Jon Jones\nhttps://www.youtube.com/watch?v=cVuqm4r92
- I0
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:March 30th: Book Week Costume
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180330T095900
-UID:19665272
-DESCRIPTION:Dear Families\,\n\nI am writing to remind you that we are goin
- g to celebrate Book Week on March 30th\, Friday. Each student is asked to 
- dress up as a favorite character from a book. Costumes could be bought or 
- hand-made.\n\nLooking forward to meeting different book characters on Frid
- ay!\n\nSincerely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Assessment Week: April 2-4
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
-UID:19573202
-DESCRIPTION:Quarter 3 Assessment\n
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Q3 Homeroom Exam Topics
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
-UID:19658448
-DESCRIPTION:•	Identify a situation you want to change \n•	Make a plan 
- for how to improve your performance in a school subject/ how to achieve a 
- personal goal.\n•	Discuss how to be a good friend.\n•	Use appropriate 
- non-verbal communication with others (e.g.\, movements\, gestures\, postur
- e\, facial expressions).\n•	Identify a way you can help improve your loc
- al/global community.\n•	Volunteer to help out at home in a way that goes
-  beyond what you are expected to do.\n
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Q3 Assessment
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
-UID:19678938
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Q3 Math Exam Topics
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
-UID:19658430
-DESCRIPTION:Grade 2 Quarter 3 Math Exam Rubric\n\nE: 90%-100%\nM: 75%-89%\
- nD: 55%-74%\nN: 35%-54%\nU: 0%-34%\n\nTopics tested:\nA. Write number mode
- ls\nB. Make a bar graph\nC. Double numbers\nD. Read and write fractions\nE
- . Degrees of certainty\nF. Lines of symmetry\nG. Use pictures to compare f
- ractions\nH. Share things equally\n
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Q3 TS Exam Topics
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
-UID:19658436
-DESCRIPTION:Grade 2 Quarter 3 TS Exam Quiz Rubric\n\nE: 90%-100%\nM: 75%-8
- 9%\nD: 55%-74%\nN: 35%-54%\nU: 0%-34%\n\nTopics tested:\nA. Forces and Mot
- ion\nB. Gravity\nC. Friction\nD. Simple Machines: Lever\, Pulley\, Ramp (i
- nclined plane)\, Wheel and Axle\, Wedge\, Screw\nE. Sound\nF. Light\nG. Re
- newable Energy: Solar\, Wind\, Hydro (water)\n
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:第十三课 我给奶奶送阳光
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180402T095900
-UID:19706282
-DESCRIPTION:1、完成第十三课练习本。\n2、复习准备考试。
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:The Big Taking Photos Day (April 3)
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180403T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180403T095900
@@ -502,6 +248,30 @@ DESCRIPTION:1、完成第十八课练习本。\n2、完成《大林寺桃
  花》写字本B并背诵。\n3、随笔一则。
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:第十九课 歌声
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180424T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180424T095900
+UID:19877423
+DESCRIPTION:1、朗读第十九课三遍。\n2、完成第十九课写字
+ 本A。\n3、抄写第十九课词语。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第二十一课 自相矛盾
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180425T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180425T095900
+UID:19887580
+DESCRIPTION:1、完成第十九课练习本。\n2、完成第二十一课
+ 写字本A。\n3、抄写第二十一课词语。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第二十一课 寓言两则
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180426T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180426T095900
+UID:19897141
+DESCRIPTION:1、完成第二十一课练习本。\n2、完成宫4 第2、3
+ 、4题。
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Talent Show note and the audition form
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180427T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180427T095900
@@ -511,18 +281,26 @@ DESCRIPTION:Dear parents\,\n\nAttached is the Talent show note and the aud
  tact us. Thank you！
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:ES Menu
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180427T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180427T095900
+UID:19866912
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Water Cycle
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180430T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180430T095900
 UID:19559380
-DESCRIPTION:The Water Cycle | The Dr. Binocs Show | Learn Videos For Kids\
- nhttps://www.youtube.com/watch?v=ncORPosDrjI\n\nThe Water Cycle\nhttp://ww
- w.sciencekids.co.nz/sciencefacts/weather/thewatercycle.html\n\nWhere Does 
- Water Come From?\nhttps://www.youtube.com/watch?v=R0K7VKkksyc\n\nWater Cyc
- le Song Video\nhttps://www.youtube.com/watch?v=TWb4KlM2vts\n\nThe Water Cy
- cle\nhttp://www.ducksters.com/science/the_water_cycle.php\n\nThe Water Cyc
- le | Educational Video for Kids\nhttps://www.youtube.com/watch?v=y5gFI3pMv
- oI
+DESCRIPTION:Water cycle song\nhttps://www.youtube.com/watch?v=aU5WCqKHBfs\
+ n\nErosion and Soil\nhttps://www.youtube.com/watch?v=im4HVXMGI68\n\nWater 
+ Breaks Down Rocks\nhttps://www.youtube.com/watch?v=NwT1e8R4hz0\n\nThe Wate
+ r Cycle | The Dr. Binocs Show | Learn Videos For Kids\nhttps://www.youtube
+ .com/watch?v=ncORPosDrjI\n\nThe Water Cycle\nhttp://www.sciencekids.co.nz/
+ sciencefacts/weather/thewatercycle.html\n\nWhere Does Water Come From?\nht
+ tps://www.youtube.com/watch?v=R0K7VKkksyc\n\nWater Cycle Song Video\nhttps
+ ://www.youtube.com/watch?v=TWb4KlM2vts\n\nThe Water Cycle\nhttp://www.duck
+ sters.com/science/the_water_cycle.php\n\nThe Water Cycle | Educational Vid
+ eo for Kids\nhttps://www.youtube.com/watch?v=y5gFI3pMvoI
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Parent Teacher Conference-Electronic Appointment Link
@@ -559,6 +337,38 @@ DESCRIPTION:Dear elementary school families\,\n\nThis email has links to m
  s you ample time to take time off to meet with your child's teacher. \nThe
   document with the links is also listed in the attachment.\n\nHave a good 
  day. \nKind regards\, \nMs. Natasha D'Costa \nHead of Elementary School.
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第二十四课 打碗碗花
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180502T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180502T095900
+UID:19906112
+DESCRIPTION:1、朗读第二十四课三遍。\n2、完成第二十四课
+ 写字本B。\n3、抄写第二十四课词语。\n4、准备默写第19
+ 、21课词语。\n5、随笔一则。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Identify ways of refusing negative peer pressure.
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180503T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180503T095900
+UID:19944737
+DESCRIPTION:Say No to Negative Peer Pressure\nhttps://www.youtube.com/watc
+ h?v=UOEmtRJSgzs\n\n\nBrainPOP: PEER PRESSURE\nhttps://www.youtube.com/watc
+ h?v=rxXBrHCrWWE\n\n
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第二十四课 打碗碗花
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180503T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180503T095900
+UID:19945237
+DESCRIPTION:1、完成第二十四课练习本。\n2、按要求预习第
+ 二十五课。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:ES Menu
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180504T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180504T095900
+UID:19945244
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:MAP Test: Reading (May 9\, 12:15 - 13:40 pm)
