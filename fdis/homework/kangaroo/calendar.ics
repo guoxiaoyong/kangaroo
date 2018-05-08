@@ -13,44 +13,6 @@ TZOFFSETTO:+0800
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-SUMMARY:The Big Taking Photos Day (April 3)
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180403T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180403T095900
-UID:19573180
-DESCRIPTION:Dear Families\,\n\nThe Big Photo Day is coming: Kangaroo class
-  photo\, All School photo\, and Individual photos. Each student will be as
- ked to have a white top and a black bottom for the official whole school p
- hoto\, and Kangaroos are going to be dressed up as Bees\, Kangaroos or Flo
- wers. Kindly support your child and make sure the outfits are ready by Apr
- il 3rd.\n\nKindly keep in mind that it is a full School Day.\n\nYour suppo
- rt is greatly appreciated at all times!\n\nSincerely\,\nMs.L\n\nApril 3: C
- lass Picture\, All School Photo\, Indiv Photo. Full School Day
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:ES Menu
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180404T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180404T095900
-UID:19705647
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Behavior issue
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180404T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180404T095900
-UID:19721884
-DESCRIPTION:Dear Families\,\n\nAs some of the students were done with Quar
- ter 3 assessments today\, they used their free time to work on 3D solar sy
- stem or world map that we are going to work on in Quarter 4. Mr.Scott is g
- oing to post Taobao links for you to buy them and play with your child at 
- home if you want to.\n\nUnfortunately\, some of the students took leftover
- s they got while compiling the 3D items without asking me. We keep talking
-  about items thet do not belong to us and that it is not ok to take anythi
- ng that is not yours and distribute it among anyone just because it is not
-  yours to begin with. kindly reinforce it at home. If your child took anyt
- hing home or took what other students gave them without my permission\, pl
- ease\, send it back to school tomorrow.\n\nAppreciated in advance.\n\nSinc
- erely\,\nMs.L
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Earth + Extreme Weather 
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180409T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180409T095900
@@ -371,15 +333,118 @@ DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180504T095900
 UID:19945244
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Grade 2: Spelling\, Grammar\, Vocabulary Practice Leveled Books
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180505T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180505T095900
+UID:19968842
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Grade 3: Spelling\, Grammar\, Vocabulary Practice Leveled Books
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180505T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180505T095900
+UID:19969056
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Grade 4: Spelling\, Grammar\, Vocabulary Practice Leveled Books
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180505T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180505T095900
+UID:19969072
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Grade 5: Spelling\, Grammar\, Vocabulary Practice Leveled Books
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180505T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180505T095900
+UID:19969092
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Friction Review Links
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180507T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180507T095900
+UID:19965520
+DESCRIPTION:Friction Song\nhttps://www.youtube.com/watch?v=tbwLiYSWVIM\n\n
+ Friction is a Force\nhttps://www.youtube.com/watch?v=wwO2KQ7uZxY\n\nA Worl
+ d Without Friction\nhttps://www.youtube.com/watch?v=VUfqjSeeZng\n\nFORCE F
+ RICTION SONG\nhttps://www.youtube.com/watch?v=YneS0pleUl8
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Rocks Website: http://www.songsforteaching.com/geologyearthscience
+ .htm
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180507T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180507T095900
+UID:19965537
+DESCRIPTION:http://www.songsforteaching.com/geologyearthscience.htm
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第二十五课 爱写诗的小螃蟹
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180507T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180507T095900
+UID:19968583
+DESCRIPTION:1、完成第二十五课练习本。\n2、完成《画鸡》
+ 写字本A并背诵。\n3、预习第二十六课。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Grade 1: Spelling\, Grammar\, Vocabulary Practice Leveled Books
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180507T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180507T095900
+UID:19968806
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:第二十六课 最后的玉米
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180508T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180508T095900
+UID:19979928
+DESCRIPTION:1、朗读第二十六课三遍。\n2、完成第二十六课
+ 写字本B。\n3、抄写第二十六课词语。
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:MAP test: May 9th\, May 16th
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180509T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180509T095900
+UID:19964703
+DESCRIPTION:Dear Families\,\n\nPlease\, see the file attached.\n\nSincerel
+ y\,\nMs.L
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:MAP Test: Reading (May 9\, 12:15 - 13:40 pm)
 DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180509T090000
 DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180509T095900
 UID:19784906
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:MAP Test: Math (May 10\, 8:15 - 9:35 am)
-DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180510T090000
-DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180510T095900
+SUMMARY:ES Menu
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180511T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180511T095900
+UID:19978165
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Talent show participants
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180511T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180511T095900
+UID:19982241
+DESCRIPTION:Dear families\,\n\nHere is the list from the Art department fo
+ r the talent show.\n\nThanks
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:MAP Test: Math (May 16\, 12:15 - 13:40 pm)
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180516T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180516T095900
 UID:19784910
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Service Learning Week: May 21-25 Plan (draft)
+DTSTART;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180521T090000
+DTEND;TZID=Asia/Shanghai;VALUE=DATE-TIME:20180521T095900
+UID:19969621
+DESCRIPTION:Dear Families\,\n\nKindly find the Service Learning Week plan 
+ (draft) attached. Small changes might be still made but here is the genera
+ l plan:\n\nMay 21: BIOFarm Field Trip (could bring money to buy plants)\nM
+ ay 22: Chocolate Factory Field Trip (could bring money to buy additional o
+ rganic chocolate/ coffee beans)\nMay 23: Hands on Activities (Kangaroos te
+ ach Koalas how to make Fruit Scrap Fertilizer\; learn to make Organic Pest
+ icide together)\nMay 24: Mainly Creative Writing\nMay 25: Presentation to 
+ ES\n\nPlease\, note that FDIS covers the cost of the BIOFarm Field Trip. F
+ amilies are asked to pay the cost of the Chocolate Factory Trip (see the p
+ lan for the prices). I am going to send you the Field Trips Permission Sli
+ p form next week.\n\nHave a great weekend!\n\nSincerely\,\nMs.L 
 END:VEVENT
 END:VCALENDAR
